@@ -1,3 +1,4 @@
-const c = console.log
-const text = require("./text.js")
+const 
+    c = console.log,
+    text = require("./text.js")
 c(text)

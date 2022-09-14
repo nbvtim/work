@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nbv</title>
+</head>
+<body>
+    <input multiple size="1" type="file" name="" id="fileInput" onchange="processFiles(files)">
+    <div id="fileOutput"></div>
+    <script>
+        let c = console.log
+        function processFiles(files){
+            c(files[0])
+            c(files[1])
+            let file = files[0]
+            let reader = new FileReader()
+            reader.onload = function(e){
+               var output = document.getElementById("fileOutput")
+               output.textContent = e.target.result
+            }
+            reader.readAsText(file)
+        }
+    </script>
+</body>
+</html>
