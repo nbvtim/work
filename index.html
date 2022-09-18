@@ -7,36 +7,11 @@
     <title>nbv</title>
 </head>
 <body>
-    <input multiple size="1" type="file" name="" id="fileInput" onchange="processFiles(files)">
-    <div id="fileOutput"></div>
+    <input multiple type="file">
+    <div></div>
     <script>
         let c = console.log
-        // function processFiles(files){
-        //     c(files[0])
-        //     c(files[1])
-        //     let file = files[0]
-        //     let reader = new FileReader()
-        //     reader.onload = function(e){
-        //        var output = document.getElementById("fileOutput")
-        //        output.textContent = e.target.result
-        //     }
-        //     reader.readAsText(file)
-        // }
-
-
-
-        
-        var myVar = 0;
-// Создали промежуточный блок div#temp
-var tempDiv = $('body').append($('<div/>').attr('id', 'temp')).find('#temp');
-// Загрузили данные в этот блок
-tempDiv.load("/package.json");
-// Записали ответ в переменную
-myVar = tempDiv.text();
-// Удалили промежуточный блок
-tempDiv.remove();
-
-console.log(myVar); // Выведет 123456 (string)
+        c('rrr')
     </script>
 </body>
 </html>

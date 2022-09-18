@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "nodemon index",
     "start": "node index"
   },
   "keywords": [],
@@ -12,6 +13,7 @@
   "dependencies": {
     "chalk": "^4.1.2",
     "fs": "^0.0.1-security",
-    "node-xlsx": "^0.21.0"
+    "node-xlsx": "^0.21.0",
+    "nodemon": "^2.0.20"
   }
 }
