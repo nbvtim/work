@@ -19,8 +19,7 @@ const
         let c = console.log
     </script>
 </body>
-</html>
-    `
+</html>`
 
 fs.writeFileSync("index.html",htmlText)
 
