@@ -23,4 +23,10 @@ const
 
 fs.writeFileSync("index.html",htmlText)
 
-c(chalk.bgBlue.bold("https://nbvtim.github.io/work/"))
+c(chalk.rgb(0,0,200).bold(`$npm i - устанавливаем все зависимости
+проект написан на Node
+$node index - Файл index.html сформирован
+произвести коммит
+на GitHab размещена страница index.html остальные файлы формируют ее
+поэтому изменять код HTML нужно в файле index.js
+страница доступна по адресу - https://nbvtim.github.io/work/`))
