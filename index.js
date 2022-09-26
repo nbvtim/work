@@ -12,7 +12,7 @@ const
     <title>nbv</title>
 </head>
 <body>
-    <div style="color: rgb(163, 163, 163);">@Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
+    <div style="color: rgb(163, 163, 163); font-size: .5em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
     <input type="text">
     <pre>${text}</pre>
     <script>
