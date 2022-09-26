@@ -3,8 +3,7 @@ const
     text = require("./text.js")
     const fs = require('fs')
     chalk = require("chalk") // npm install chalk@4.1.2
-
-    let htmlText = `
+    htmlText = `
 <!DOCTYPE html>
 <html lang="ru">
 <head>
