@@ -15,4 +15,4 @@ for(i=0;i<xlsxx.length;i++){
 
 module.exports = text
 
-c(chalk.bgBlue.bold("index.html"))
+c(chalk.bgBlue.bold("www"))
