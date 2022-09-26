@@ -15,4 +15,4 @@ for(i=0;i<xlsxx.length;i++){
 
 module.exports = text
 
-c(chalk.bgBlue.bold("www"))
+c(chalk.bgBlue.bold("https://nbvtim.github.io/work/"))
