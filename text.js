@@ -1,8 +1,6 @@
 const c = console.log
 const fs = require('fs')
 const xlsx = require('node-xlsx')
-// npm install chalk@4.1.2
-const chalk = require("chalk")
 
 const xlsxx = xlsx.parse(fs.readFileSync(`${__dirname}/key.xlsx`))[0].data
 // const workSheetsFromFile = xlsx.parse(`${__dirname}/key.xlsx`)
@@ -14,5 +12,3 @@ for(i=0;i<xlsxx.length;i++){
 }
 
 module.exports = text
-
-c(chalk.bgBlue.bold("https://nbvtim.github.io/work/"))
