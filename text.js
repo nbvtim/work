@@ -14,6 +14,5 @@ for(i=0;i<xlsxx.length;i++){
 }
 
 module.exports = text
-fs.writeFileSync("bd.txt",text)
 
-c(chalk.bgBlue.bold(`модуль _text.js_ экспортирован       \nсоздан файл bd.txt с данными из xmlx `))
+c(chalk.bgBlue.bold(`../index.html`))
