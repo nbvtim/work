@@ -28,8 +28,8 @@ const
             sumbol   = pre.innerText[pozition]
             div.innerHTML = "Позиция записи: " + pozition
             document.body.append(div)
-        })
-        
+         })
+
     </script>
 </body>
 </html>`
