@@ -13,8 +13,8 @@ const
     <title>nbv</title>
 </head>
 <body>
-    <div style="color: rgb(256, 0, 0); font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
-    <input type="text">
+    <div style="color: #0011ff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
+    <input type="text" alt="asds" autofocus placeholder="ПОИСК" value="">
     <pre>${text}</pre>
     <script>
         let c = console.log
