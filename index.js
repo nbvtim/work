@@ -1,7 +1,9 @@
+const xlsxx = require("./text.js")
+
 const 
     c = console.log,
     text = require("./text.js")
-    const fs = require('fs')
+    fs = require('fs')
     chalk = require("chalk") // npm install chalk@4.1.2
     htmlText = `
 <!DOCTYPE html>
@@ -11,7 +13,7 @@ const
     <title>nbv</title>
 </head>
 <body>
-    <div style="color: rgb(163, 163, 163); font-size: .5em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
+    <div style="color: rgb(256, 0, 0); font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
     <input type="text">
     <pre>${text}</pre>
     <script>
