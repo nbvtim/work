@@ -18,6 +18,18 @@ const
     <pre>${text}</pre>
     <script>
         let c = console.log
+        let input = document.querySelector("input")
+        let pre = document.querySelector("pre")
+        let div = document.createElement("div")
+        let result = ""
+        input.addEventListener("keyup", (ev)=>{
+            pre.style.display = "none"
+            pozition = pre.innerText.indexOf(input.value)
+            sumbol   = pre.innerText[pozition]
+            div.innerHTML = "Позиция записи: " + pozition
+            document.body.append(div)
+        })
+        
     </script>
 </body>
 </html>`
