@@ -65,7 +65,7 @@ input.addEventListener("keyup", (event)=>{
 
 fs.writeFileSync("index.html",htmlText)
 
-c(chalk.bgRgb(0,0,200).bold(`$npm i - устанавливаем все зависимости
+c(chalk.rgb(0,0,200).bold(`$npm i - устанавливаем все зависимости
 проект написан на Node
 $node index - Файл index.html сформирован
 произвести коммит
