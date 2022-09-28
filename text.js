@@ -8,7 +8,7 @@ const xlsxx = xlsx.parse(fs.readFileSync(`${__dirname}/key.xlsx`))[0].data
 let text = ""
 for(i=0;i<xlsxx.length;i++){
    // fs.appendFileSync("bd.txt", `${xlsxx[i].toString()} \n`)
-   text += (i + "," + xlsxx[i].toString()+"\n").replace( /,/g, ",  \t" )
+   text += ("[" + xlsxx[i].toString()+"]\n")//.replace( /,/g, ",  \t" )
 }
 
 module.exports = text
