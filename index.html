@@ -8,7 +8,8 @@
 <body>
     <div style="color: #0011ff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
     <input type="text" alt="asds" autofocus placeholder="ПОИСК" value="">
-    <pre>[Корпус,№ двери,Помещение,запасные,пост,примечание]
+    <pre>
+[Корпус,№ двери,Помещение,запасные,пост,примечание]
 [ОК,1002,Лыжная база,0,2,0]
 [ОК,1077,Бывший туалет женский, с коридора,5,0,акт от 08.03.17 г.]
 [ОК,1006,Гардероб,0,1,0]
@@ -172,39 +173,40 @@
 [ОК,Склад ,ИТС Сантехника,2,1,0]
 [ОК,Склад ,ИТС Продажа,2,1,0]
 [ОК,2063,ОК горячий цех,5,0,0]
-</pre>
+
+    </pre>
 
     <script>
-        let c = console.log
-        let input = document.querySelector("input")
-        let pre = document.querySelector("pre")
-        let div = document.createElement("div")
-        input.addEventListener("keyup", (ev)=>{
-            pre.style.display = "none"
-            pozition = pre.innerText.indexOf(input.value)
-            let str1 = ""
-            let str2 = ""
-            if(input.value != ""){
-                for(i=pozition;i<pre.innerText.length;i++){
-                    if(pre.innerText[i] === "]"){
-                        break
-                    }else{
-                        str1 += pre.innerText[i]
-                    }
-                }
-                for(i=pozition;i<pre.innerText.length;i--){
-                    if(pre.innerText[i-1] === "["){
-                        break
-                    }else{
-                        str2 += pre.innerText[i-1]
-                    }
-                }
+let 
+    c = console.log
+    input = document.querySelector("input")
+    pre = document.querySelector("pre")
+    div = document.createElement("div")
+
+input.addEventListener("keyup", (event)=>{
+    pre.style.display = "none"
+    pozition = pre.innerText.indexOf(input.value)
+    let str1 = ""
+    let str2 = ""
+    if(input.value != "" && pozition != -1){
+        for(i=pozition;i<pre.innerText.length;i++){
+            if(pre.innerText[i] === "]"){
+                break
+            }else{
+                str1 += pre.innerText[i]
             }
-           
-            div.innerHTML = str2.split("").reverse().join("") + str1
-            
-            document.body.append(div)
-         })
+        }
+        for(i=pozition;i<pre.innerText.length;i--){
+            if(pre.innerText[i-1] === "["){
+                break
+            }else{
+                str2 += pre.innerText[i-1]
+            }
+        }
+    }
+div.innerHTML = str2.split("").reverse().join("") + str1
+document.body.append(div)
+})
         
     </script>
 </body>
