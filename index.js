@@ -7,7 +7,7 @@ const
     text = ""
     
 for(i=0;i<xlsxx.length;i++){
-    text += ("[" + xlsxx[i].toString()+"]\n")//.replace( /,/g, ",  \t" )
+    text += ("[ " + xlsxx[i].toString()+" ]\n")//.replace( /,/g, ",  \t" )
 }
 
 let htmlText = `
