@@ -18,7 +18,7 @@ let htmlText = `
     <title>nbv</title>
 </head>
 <body>
-    <div style="color: #0011ff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
+    <div style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
     <input type="text" alt="asds" autofocus placeholder="ПОИСК" value="">
     <pre>
 ${text}
@@ -51,9 +51,12 @@ input.addEventListener("keyup", (event)=>{
                 str2 += pre.innerText[i-1]
             }
         }
+    }else{
+        input.value = ""
+        pre.style.display = "block"
     }
-div.innerHTML = str2.split("").reverse().join("") + str1
-document.body.append(div)
+    div.innerHTML = str2.split("").reverse().join("") + str1
+    document.body.append(div)
 })
         
     </script>
