@@ -312,14 +312,14 @@ window.onload = function(){
         let result = ""
         if(input.value != "" && pozition != -1){
             pre.style.display = "none"
-            for(i=pozition;i<pre.innerText.length;i++){
+            for(i = pozition; i < pre.innerText.length; i++){
                 if(pre.innerText[i] === "]"){
                     break
                 }else{
                     str1 += pre.innerText[i]
                 }
             }
-            for(i=pozition;i<pre.innerText.length;i--){
+            for(i = pozition; i < pre.innerText.length; i--){
                 if(pre.innerText[i-1] === "["){
                     break
                 }else{
