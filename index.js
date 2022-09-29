@@ -64,6 +64,7 @@ window.onload = function(){
             div.innerHTML = result
             div.id = "idDiv"
             document.body.append(div)
+            document.querySelector("#idDiv").style.display = "block"
         }else{
             pre.style.display = "block"
             document.querySelector("#idDiv").style.display = "none"
