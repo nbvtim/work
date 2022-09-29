@@ -306,12 +306,12 @@ let
     div = document.createElement("div")
 
 input.addEventListener("keyup", (event)=>{
-    pre.style.display = "none"
     pozition = pre.innerText.indexOf(input.value)
     let str1 = ""
     let str2 = ""
     let result = ""
     if(input.value != "" && pozition != -1){
+        pre.style.display = "none"
         for(i=pozition;i<pre.innerText.length;i++){
             if(pre.innerText[i] === "]"){
                 break
