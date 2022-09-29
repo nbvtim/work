@@ -6,10 +6,11 @@ const
     chalk = require("chalk") // npm install chalk@4.1.2
     text = ""
     
+    
 for(i=0;i<xlsxx.length;i++){
-    text += ("[ " + xlsxx[i].toString()+" ]\n")//.replace( /,/g, ",  \t" )
+    text += ("[" + xlsxx[i].toString()+"]\n")//.replace( /,/g, ",  \t" )
 }
-
+c(text)
 let htmlText = `
 <!DOCTYPE html>
 <html lang="ru">
@@ -36,6 +37,7 @@ input.addEventListener("keyup", (event)=>{
     pozition = pre.innerText.indexOf(input.value)
     let str1 = ""
     let str2 = ""
+    let result = ""
     if(input.value != "" && pozition != -1){
         for(i=pozition;i<pre.innerText.length;i++){
             if(pre.innerText[i] === "]"){
@@ -51,11 +53,19 @@ input.addEventListener("keyup", (event)=>{
                 str2 += pre.innerText[i-1]
             }
         }
+        str2 = str2.split('').reverse().join('')
     }else{
         input.value = ""
         pre.style.display = "block"
     }
-    div.innerHTML = str2.split("").reverse().join("") + str1
+    let xxx = (str2 + str1).split(",")
+    let yyy = ("${xlsxx[0]}").split(",")
+
+    for(i=0;i<yyy.length; i++){
+        result += yyy[i] + " : " + xxx[i] + "<br>"
+    }
+    
+    div.innerHTML = result
     document.body.append(div)
 })
         
@@ -65,10 +75,4 @@ input.addEventListener("keyup", (event)=>{
 
 fs.writeFileSync("index.html",htmlText)
 
-c(chalk.rgb(0,0,200).bold(`$npm i - устанавливаем все зависимости
-проект написан на Node
-$node index - Файл index.html сформирован
-произвести коммит
-на GitHab размещена страница index.html остальные файлы формируют ее
-поэтому изменять код HTML нужно в файле index.js
-страница доступна по адресу - https://nbvtim.github.io/work/`))
+c(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/`))
