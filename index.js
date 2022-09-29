@@ -18,7 +18,7 @@ let htmlText = `
     <title>nbv</title>
 </head>
 <body>
-    <div style="color: #b5baff; font-size: .2em;">v1.0.1 @Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
+    <div style="color: #b5baff; font-size: .2em;">v1.0.2 @Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
     <input type="text" alt="asds" autofocus placeholder="ПОИСК" value="">
     <pre>
 ${text}
