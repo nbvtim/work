@@ -64,7 +64,6 @@ input.addEventListener("keyup", (event)=>{
         div.id = "idDiv"
         document.body.append(div)
     }else{
-        input.value = ""
         pre.style.display = "block"
         document.querySelector("#idDiv").style.display = "none"
     }
