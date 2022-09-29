@@ -61,10 +61,12 @@ input.addEventListener("keyup", (event)=>{
             result += yyy[i] + " : " + xxx[i] + "<br>"
         }
         div.innerHTML = result
+        div.id = "idDiv"
         document.body.append(div)
     }else{
         input.value = ""
         pre.style.display = "block"
+        document.querySelector("#idDiv").style.display = "none"
     }
 }) 
     </script>

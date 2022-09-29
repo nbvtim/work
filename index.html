@@ -295,6 +295,7 @@
 [Прованс,_,Со стороны ресторана левая,4,1,_,_]
 [Прованс,_,Со стороны 2й линии правая,4,1,_,_]
 [Прованс,_,Со стороны 2й линии левая,4,1,_,_]
+
     </pre>
 
     <script>
@@ -326,21 +327,22 @@ input.addEventListener("keyup", (event)=>{
             }
         }
         str2 = str2.split('').reverse().join('')
+
+        let xxx = (str2 + str1).split(",")
+        let yyy = ("Корпус,№ двери,Название помещения,Ключи запасные,Ключи пост №8,Примечание,Допущены к вскрытию").split(",")
+
+        for(i=0;i<yyy.length; i++){
+            result += yyy[i] + " : " + xxx[i] + "<br>"
+        }
+        div.innerHTML = result
+        div.id = "idDiv"
+        document.body.append(div)
     }else{
         input.value = ""
         pre.style.display = "block"
+        document.querySelector("#idDiv").style.display = "none"
     }
-    let xxx = (str2 + str1).split(",")
-    let yyy = ("Корпус,№ двери,Название помещения,Ключи запасные,Ключи пост №8,Примечание,Допущены к вскрытию").split(",")
-
-    for(i=0;i<yyy.length; i++){
-        result += yyy[i] + " : " + xxx[i] + "<br>"
-    }
-    
-    div.innerHTML = result
-    document.body.append(div)
-})
-        
+}) 
     </script>
 </body>
 </html>
