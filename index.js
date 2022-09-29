@@ -25,49 +25,51 @@ ${text}
     </pre>
 
     <script>
-let 
-    c = console.log
-    input = document.querySelector("input")
-    pre = document.querySelector("pre")
-    div = document.createElement("div")
+window.onload = function(){
+    let 
+        c = console.log
+        input = document.querySelector("input")
+        pre = document.querySelector("pre")
+        div = document.createElement("div")
 
-input.addEventListener("keyup", (event)=>{
-    pozition = pre.innerText.indexOf(input.value)
-    let str1 = ""
-    let str2 = ""
-    let result = ""
-    if(input.value != "" && pozition != -1){
-        pre.style.display = "none"
-        for(i=pozition;i<pre.innerText.length;i++){
-            if(pre.innerText[i] === "]"){
-                break
-            }else{
-                str1 += pre.innerText[i]
+    input.addEventListener("keyup", (event)=>{
+        pozition = pre.innerText.indexOf(input.value)
+        let str1 = ""
+        let str2 = ""
+        let result = ""
+        if(input.value != "" && pozition != -1){
+            pre.style.display = "none"
+            for(i=pozition;i<pre.innerText.length;i++){
+                if(pre.innerText[i] === "]"){
+                    break
+                }else{
+                    str1 += pre.innerText[i]
+                }
             }
-        }
-        for(i=pozition;i<pre.innerText.length;i--){
-            if(pre.innerText[i-1] === "["){
-                break
-            }else{
-                str2 += pre.innerText[i-1]
+            for(i=pozition;i<pre.innerText.length;i--){
+                if(pre.innerText[i-1] === "["){
+                    break
+                }else{
+                    str2 += pre.innerText[i-1]
+                }
             }
-        }
-        str2 = str2.split('').reverse().join('')
+            str2 = str2.split('').reverse().join('')
 
-        let xxx = (str2 + str1).split(",")
-        let yyy = ("${xlsxx[0]}").split(",")
+            let xxx = (str2 + str1).split(",")
+            let yyy = ("${xlsxx[0]}").split(",")
 
-        for(i=0;i<yyy.length; i++){
-            result += yyy[i] + " : " + xxx[i] + "<br>"
+            for(i=0;i<yyy.length; i++){
+                result += yyy[i] + " : " + xxx[i] + "<br>"
+            }
+            div.innerHTML = result
+            div.id = "idDiv"
+            document.body.append(div)
+        }else{
+            pre.style.display = "block"
+            document.querySelector("#idDiv").style.display = "none"
         }
-        div.innerHTML = result
-        div.id = "idDiv"
-        document.body.append(div)
-    }else{
-        pre.style.display = "block"
-        document.querySelector("#idDiv").style.display = "none"
-    }
-}) 
+    })
+} 
     </script>
 </body>
 </html>`
