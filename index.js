@@ -6,11 +6,10 @@ const
     chalk = require("chalk") // npm install chalk@4.1.2
     text = ""
     
-    
 for(i=0;i<xlsxx.length;i++){
     text += ("[" + xlsxx[i].toString()+"]\n")//.replace( /,/g, ",  \t" )
 }
-c(text)
+
 let htmlText = `
 <!DOCTYPE html>
 <html lang="ru">
