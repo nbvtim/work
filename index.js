@@ -53,21 +53,20 @@ input.addEventListener("keyup", (event)=>{
             }
         }
         str2 = str2.split('').reverse().join('')
+
+        let xxx = (str2 + str1).split(",")
+        let yyy = ("${xlsxx[0]}").split(",")
+
+        for(i=0;i<yyy.length; i++){
+            result += yyy[i] + " : " + xxx[i] + "<br>"
+        }
+        div.innerHTML = result
+        document.body.append(div)
     }else{
         input.value = ""
         pre.style.display = "block"
     }
-    let xxx = (str2 + str1).split(",")
-    let yyy = ("${xlsxx[0]}").split(",")
-
-    for(i=0;i<yyy.length; i++){
-        result += yyy[i] + " : " + xxx[i] + "<br>"
-    }
-    
-    div.innerHTML = result
-    document.body.append(div)
-})
-        
+}) 
     </script>
 </body>
 </html>`
