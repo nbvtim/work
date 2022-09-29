@@ -78,3 +78,5 @@ window.onload = function(){
 fs.writeFileSync("index.html",htmlText)
 
 c(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/`))
+
+c(xlsx.parse(fs.readFileSync(`${__dirname}/key.xlsx`)))
