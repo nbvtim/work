@@ -38,13 +38,13 @@ window.onload = function(){
     input.addEventListener("keyup", (event)=>{
         pozition = pre.innerText.indexOf(input.value)  
 
-poz = pre.innerText.indexOf(input.value)
-let arr = []
-while (poz != -1) {
-arr.push(poz);
-poz = pre.innerText.indexOf(input.value, poz + 1);
-}
-c(arr)
+// poz = pre.innerText.indexOf(input.value)
+// let arr = []
+// while (poz != -1) {
+// arr.push(poz);
+// poz = pre.innerText.indexOf(input.value, poz + 1);
+// }
+// c(arr)
 
         let str1 = ""
         let str2 = ""
