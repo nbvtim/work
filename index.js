@@ -18,7 +18,7 @@ let htmlText = `
     <title>nbv</title>
 </head>
 <body>
-    <div style="color: #b5baff; font-size: .2em;">v1.0.4 @Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
+    <div style="color: #b5baff; font-size: .2em;">v1.0.5 @Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
     <input type="text" alt="asds" autofocus placeholder="ПОИСК" value="">
     <pre>
 ${text}
@@ -59,15 +59,15 @@ window.onload = function(){
             let yyy = ("${xlsxx[0]}").split(",")
 
             for(i=0;i<yyy.length; i++){
-                result += yyy[i] + " : " + xxx[i] + "<br>"
+                result += yyy[i] + " :  " + xxx[i] + "<br>"
             }
-            div.innerHTML = result
-            div.id = "idDiv"
+
+            div.innerHTML = xxx+'<br><br>'+result
             document.body.append(div)
-            document.querySelector("#idDiv").style.display = "block"
+            div.style.display = "block"
         }else{
             pre.style.display = "block"
-            document.querySelector("#idDiv").style.display = "none"
+            div.style.display = "none"
         }
     })
 } 
