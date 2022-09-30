@@ -6,8 +6,8 @@ const
     chalk = require("chalk") // npm install chalk@4.1.2
     text = ""
     
-for(i=0;i<xlsxx.length;i++){
-    text += ("[" + xlsxx[i].toString()+"]\n")//.replace( /,/g, ",  \t" )
+for(i = 0; i < xlsxx.length; i ++){
+        text += "[" + xlsxx[i] + "]\n"
 }
 
 let htmlText = `
@@ -78,5 +78,3 @@ window.onload = function(){
 fs.writeFileSync("index.html",htmlText)
 
 c(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/`))
-
-c(xlsx.parse(fs.readFileSync(`${__dirname}/key.xlsx`)))
