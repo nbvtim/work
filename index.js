@@ -18,10 +18,10 @@ let htmlText = `
         td{font-size: 0.7em;border: 1px solid;}
     </style>
     <meta charset="UTF-8">
-    <title>nbv</title>
+    <title>v1.0.7</title>
 </head>
 <body>
-    <div style="color: #b5baff; font-size: .2em;">v1.0.6 @Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
+    <div style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
     <input type="text" alt="asds" autofocus placeholder="ПОИСК" value="">
     <pre>
 ${text}
@@ -36,7 +36,16 @@ window.onload = function(){
         div = document.createElement("div")
 
     input.addEventListener("keyup", (event)=>{
-        pozition = pre.innerText.indexOf(input.value)
+        pozition = pre.innerText.indexOf(input.value)  
+
+poz = pre.innerText.indexOf(input.value)
+let arr = []
+while (poz != -1) {
+arr.push(poz);
+poz = pre.innerText.indexOf(input.value, poz + 1);
+}
+c(arr)
+
         let str1 = ""
         let str2 = ""
         let td1 = ""
@@ -59,8 +68,7 @@ window.onload = function(){
                 td1 += "<td>" + yyy[i] + "</td>"
                 td2 += "<td>" + xxx[i] + "</td>"
             }
-            c(td1)
-            c(td2)
+
             div.innerHTML = "<table><tr>" + td1 + "</tr><tr>" + td2 + "</tr></table>"
             document.body.append(div)
             div.style.display = "block"
