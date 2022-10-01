@@ -337,9 +337,8 @@
                     }
                     str1 = str1.split('').reverse().join('')   
                     arrStr.push((str1+str2).split(","))
-                }                
+                }
                 let text = ""
-                let textM = ""
                 //j - количество столбцов
                 //i - количество строк
                 for (let i = 0; i < arrStr.length; i++) {
@@ -348,9 +347,9 @@
                         text+="<td>"+arrStr[i][j]+"</td>"
                     }
                 }
+                let textM = "<tr><td>Корпус</td><td>№ двери</td><td>Название помещения</td><td>Ключи запасные</td><td>Ключи пост №8</td><td>Примечание</td><td>Допущены к вскрытию</td></tr>"
 
-
-                div.innerHTML = "<table>"+text+"</table>"
+                div.innerHTML = "<table>"+ textM +text+"</table>"
                 document.body.append(div)
                 pre.style.display = 'none'
                 div.style.display = 'block'
