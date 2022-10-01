@@ -28,56 +28,53 @@ ${text}
     </pre>
 
     <script>
-window.onload = function(){
-    let 
-        c = console.log
-        input = document.querySelector("input")
-        pre = document.querySelector("pre")
-        div = document.createElement("div")
-
-    input.addEventListener("keyup", (event)=>{
-        pozition = pre.innerText.indexOf(input.value)  
-
-// poz = pre.innerText.indexOf(input.value)
-// let arr = []
-// while (poz != -1) {
-// arr.push(poz);
-// poz = pre.innerText.indexOf(input.value, poz + 1);
-// }
-// c(arr)
-
-        let str1 = ""
-        let str2 = ""
-        let td1 = ""
-        let td2 = ""
-        if(input.value != "" && pozition != -1){
-            pre.style.display = "none"
-            for(i=pozition;i<pre.innerText.length;i++){
-                if(pre.innerText[i] === "]"){break}
-                else{str1 += pre.innerText[i]}}
-            for(i=pozition;i<pre.innerText.length;i--){
-                if(pre.innerText[i-1] === "["){break}
-                else{str2 += pre.innerText[i-1]}}
-
-            str2 = str2.split('').reverse().join('')
-
-            let xxx = (str2 + str1).split(",")
-            let yyy = ("${xlsxx[0]}").split(",")
-
-            for(i=0;i<yyy.length; i++){
-                td1 += "<td>" + yyy[i] + "</td>"
-                td2 += "<td>" + xxx[i] + "</td>"
+    window.onload = function(){
+        let 
+            c = console.log
+            input = document.querySelector("input")
+            pre = document.querySelector("pre")
+            div = document.createElement("div")
+    
+        input.addEventListener("keyup", function(e){
+            pozition = pre.innerText.indexOf(input.value)
+            let arr = []
+            while (input.value != "" && pozition != -1) {
+                arr.push(pozition)
+                pozition = pre.innerText.indexOf(input.value, pozition + 1)
             }
-
-            div.innerHTML = "<table><tr>" + td1 + "</tr><tr>" + td2 + "</tr></table>"
-            document.body.append(div)
-            div.style.display = "block"
-        }else{
-            pre.style.display = "block"
-            div.style.display = "none"
-        }
-    })
-} 
+    
+            if(input.value != ""){
+                let arrStr = []
+                for(j=0;j<arr.length;j++){    
+                    let str1=""
+                    let str2=""
+                    for( i = arr[j]; i < pre.innerText.length; i++){
+                        if(pre.innerText[i] === "]"){break}
+                        else{str2 += pre.innerText[i]}
+                    }
+                    for( i = arr[j]; i < pre.innerText.length; i--){
+                        if(pre.innerText[i-1] === "["){break}
+                        else{str1 += pre.innerText[i-1]}
+                    }
+                    str1 = str1.split('').reverse().join('')   
+                    arrStr.push((str1+str2).split(","))
+                }
+                pre.style.display = 'none'
+    c(arrStr)
+    c(arrStr[0])
+    c(arrStr[0][0])
+                
+    //нужно както вывести в таблчном виде arrStr
+    
+    
+                div.innerHTML = "<table>"+ "text" +"</table>"
+                document.body.append(div)
+            }else{
+                pre.style.display = 'block'
+                div.style.display = 'none'
+            }
+        })
+    }
     </script>
 </body>
 </html>`
