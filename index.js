@@ -15,7 +15,12 @@ let htmlText = `
 <html lang="ru">
 <head>
     <style>
-        td{font-size: 0.7em;border: 1px solid;}
+        td{
+            font-size: 0.7em;
+            border: 1px solid;
+            width: 10%;
+            font-family: sans-serif;
+        }
     </style>
     <meta charset="UTF-8">
     <title>v1.0.7</title>
@@ -35,7 +40,6 @@ ${text}
             input = document.querySelector("input")
             pre = document.querySelector("pre")
             div = document.createElement("div")
-    
         input.addEventListener("keyup", function(e){
             pozition = pre.innerText.indexOf(input.value)
             let arr = []
@@ -59,23 +63,23 @@ ${text}
                     }
                     str1 = str1.split('').reverse().join('')   
                     arrStr.push((str1+str2).split(","))
-                }
-                pre.style.display = 'none'
-                div.style.display = 'block'
-                
+                }                
                 let text = ""
+                let textM = ""
                 //j - количество столбцов
                 //i - количество строк
                 for (let i = 0; i < arrStr.length; i++) {
                     text+="</tr>"
                     for (let j = 0; j < arrStr[i].length; j++) {
                         text+="<td>"+arrStr[i][j]+"</td>"
-                    }}
-                    c(arrStr[0][0])
+                    }
+                }
 
 
                 div.innerHTML = "<table>"+text+"</table>"
                 document.body.append(div)
+                pre.style.display = 'none'
+                div.style.display = 'block'
             }else{
                 pre.style.display = 'block'
                 div.style.display = 'none'
