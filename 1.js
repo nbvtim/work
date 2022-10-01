@@ -21,6 +21,16 @@ let htmlText = `
     <title>v1.0.7</title>
 </head>
 <body>    
+
+<table>
+    <tr> <td>1</td><td>2</td><td>3</td><td></td> </tr>
+    <tr> <td></td><td></td><td></td><td></td> </tr>
+    <tr> <td></td><td></td><td></td><td></td> </tr>
+    <tr> <td></td><td></td><td></td><td>4</td> </tr>
+</table>
+
+
+
     <div style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
     <input type="text" alt="asds" autofocus placeholder="ПОИСК" value="">
     <pre>
@@ -65,6 +75,7 @@ c(arrStr[0])
 c(arrStr[0][0])
             
 //нужно както вывести в таблчном виде arrStr
+
 
             div.innerHTML = "<table>"+ "text" +"</table>"
             document.body.append(div)
