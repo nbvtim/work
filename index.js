@@ -18,12 +18,12 @@ let htmlText = `
         td{
             font-size: 0.7em;
             border: 1px solid;
-            width: 10%;
+            width: 50px;
             font-family: sans-serif;
         }
     </style>
     <meta charset="UTF-8">
-    <title>v1.0.7</title>
+    <title>v1.1.0</title>
 </head>
 <body>
 
