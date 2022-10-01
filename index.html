@@ -9,12 +9,7 @@
     <title>v1.0.7</title>
 </head>
 <body>
-    <table>
-        <tr>    <td>1</td><td>1</td><td>1</td><td>1</td><td>1</td>    </tr>
-        <tr>    <td> </td><td> </td><td> </td><td>2</td><td> </td>    </tr>
-        <tr>    <td> </td><td> </td><td>2</td><td> </td><td> </td>    </tr>
-        <tr>    <td>2</td><td>2</td><td> </td><td> </td><td> </td>    </tr>
-    </table>
+
     <div style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Tel: +7 918 2117958</div>
     <input type="text" alt="asds" autofocus placeholder="ПОИСК" value="">
     <pre>
@@ -341,23 +336,16 @@
                 }
                 pre.style.display = 'none'
                 div.style.display = 'block'
-//---------------------------------------------------------------           
+                
                 let text = ""
-// for (let i = 0; i < arrStr.length; i++) {
-//     for (let j = 0; j < arrStr[i].length; j++) {
-//         text += "<td>"+arrStr[i][j]+"</td>"
-//         for (let k = 0; k < arrStr.length; k+=9) {
-//             text= "<tr>" + text + "</tr>"
-// }}}c(text)
-
-//j - количество столбцов
-//i - количество строк
-for (let i = 0; i < arrStr.length; i++) {
-    text+="</tr>"
-    for (let j = 0; j < arrStr[i].length; j++) {
-        text+="<td>"+arrStr[i][j]+"</td>"
-    }
-}
+                //j - количество столбцов
+                //i - количество строк
+                for (let i = 0; i < arrStr.length; i++) {
+                    text+="</tr>"
+                    for (let j = 0; j < arrStr[i].length; j++) {
+                        text+="<td>"+arrStr[i][j]+"</td>"
+                    }}
+                    c(arrStr[0][0])
 
 
                 div.innerHTML = "<table>"+text+"</table>"
