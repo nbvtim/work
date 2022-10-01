@@ -65,6 +65,7 @@ ${text}
                     arrStr.push((str1+str2).split(","))
                 }
                 let text = ""
+                let textM = "<tr><td>${xlsxx[0][0]}</td><td>${xlsxx[0][1]}</td><td>${xlsxx[0][2]}</td><td>${xlsxx[0][3]}</td><td>${xlsxx[0][4]}</td><td>${xlsxx[0][5]}</td><td>${xlsxx[0][6]}</td></tr>"
                 //j - количество столбцов
                 //i - количество строк
                 for (let i = 0; i < arrStr.length; i++) {
@@ -73,7 +74,6 @@ ${text}
                         text+="<td>"+arrStr[i][j]+"</td>"
                     }
                 }
-                let textM = "<tr><td>${xlsxx[0][0]}</td><td>${xlsxx[0][1]}</td><td>${xlsxx[0][2]}</td><td>${xlsxx[0][3]}</td><td>${xlsxx[0][4]}</td><td>${xlsxx[0][5]}</td><td>${xlsxx[0][6]}</td></tr>"
 
                 div.innerHTML = "<table>"+ textM +text+"</table>"
                 document.body.append(div)
