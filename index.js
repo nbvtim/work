@@ -30,8 +30,7 @@ let htmlText = `
     <div style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
     <input type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v0.0.1</span>
     <pre style="color: rgb(186, 181, 255);">
-${text}
-    </pre>
+${text}</pre>
 
     <script>
     window.onload = function(){
