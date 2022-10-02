@@ -7,7 +7,7 @@ const
     text = ""
     
 for(i = 0; i <= xlsxx.length; i ++){
-        text += "[" + xlsxx[i] + "]\n"
+        text += "[" +i+ xlsxx[i] + "]\n"
 }
 
 let htmlText = fs.readFileSync("./index.html","utf8")
