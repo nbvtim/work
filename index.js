@@ -75,7 +75,6 @@ ${text}
                         text+="<td>"+arrStr[i][j]+"</td>"
                     }
                 }
-
                 div.innerHTML = "<table>"+ textM +text+"</table>"
                 document.body.append(div)
                 pre.style.display = 'none'
