@@ -9,6 +9,7 @@ const
 for(i = 0; i < xlsxx.length; i ++){
         text += "[" + xlsxx[i] + "]\n"
 }
+
 let htmlText = `
 <!DOCTYPE html>
 <html lang="ru">
@@ -27,7 +28,7 @@ let htmlText = `
 <body>
 
     <div style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
-    <input type="text" alt="asds" autofocus placeholder="ПОИСК" value="">
+    <input type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v0.0.1</span>
     <pre style="color: rgb(186, 181, 255);">
 ${text}
     </pre>
@@ -65,7 +66,7 @@ ${text}
                     arrStr.push((str1+str2).split(","))
                 }
                 let text = ""
-                let textM = "<tr><td>Корпус</td><td>№ двери</td><td>Название помещения</td><td>Ключи запасные</td><td>Ключи пост №8</td><td>Примечание</td><td>Допущены к вскрытию</td></tr>"
+                let textM = "<tr><td>${xlsxx[0][0]}</td><td>${xlsxx[0][1]}</td><td>${xlsxx[0][2]}</td><td>${xlsxx[0][3]}</td><td>${xlsxx[0][4]}</td><td>${xlsxx[0][5]}</td><td>${xlsxx[0][6]}</td></tr>"
                 //j - количество столбцов
                 //i - количество строк
                 for (let i = 0; i < arrStr.length; i++) {
