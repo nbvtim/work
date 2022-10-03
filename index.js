@@ -5,6 +5,11 @@ const
     xlsxx = xlsx.parse(fs.readFileSync(`${__dirname}/key.xlsx`))[0].data
     chalk = require("chalk") // npm install chalk@4.1.2
     text = ""
+/*система контроля версии*/
+    let package_json = JSON.parse(fs.readFileSync("package.json","utf8"))
+    package_json.version = `0.0.${++package_json.version.split(".")[2]}`
+    fs.writeFileSync("package.json", JSON.stringify(package_json))
+    c(package_json.version)
 
 for(i = 0; i < xlsxx.length; i ++){
         text += "[" + xlsxx[i] + "]\n"
@@ -28,7 +33,7 @@ let htmlText = `
 <body>
 
     <div style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
-    <input type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v0.0.1 </span>
+    <input type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_${package_json.version} </span>
     <pre style="color: rgb(186, 181, 255);">
 ${text}</pre>
 
@@ -90,7 +95,7 @@ ${text}</pre>
 `
 
 fs.writeFileSync("index.html",htmlText)
-c(JSON.parse(fs.readFileSync("package.json","utf8")).version)
+
 
 c(chalk.rgb(0,0,200).bold(`
 https://nbvtim.github.io/work/`))
