@@ -90,6 +90,7 @@ ${text}</pre>
 `
 
 fs.writeFileSync("index.html",htmlText)
+c(JSON.parse(fs.readFileSync("package.json","utf8")).version)
 
 c(chalk.rgb(0,0,200).bold(`
 https://nbvtim.github.io/work/`))
