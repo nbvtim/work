@@ -9,11 +9,10 @@ const
     let package_json = JSON.parse(fs.readFileSync("package.json","utf8"))
     package_json.version = `0.0.${++package_json.version.split(".")[2]}`
     fs.writeFileSync("package.json", JSON.stringify(package_json))
-
+/*-----------------------*/
 for(i = 0; i < xlsxx.length; i ++){
         text += "[" + xlsxx[i] + "]\n"
 }
-
 let htmlText = `
 <!DOCTYPE html>
 <html lang="ru">
@@ -97,9 +96,7 @@ ${text}</pre>
 </body>
 </html>
 `
-
 fs.writeFileSync("index.html",htmlText)
-
 
 c(chalk.rgb(0,0,200).bold(`
 https://nbvtim.github.io/work/`))
