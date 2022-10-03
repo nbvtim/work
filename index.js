@@ -9,7 +9,6 @@ const
     let package_json = JSON.parse(fs.readFileSync("package.json","utf8"))
     package_json.version = `0.0.${++package_json.version.split(".")[2]}`
     fs.writeFileSync("package.json", JSON.stringify(package_json))
-    c(package_json.version)
 
 for(i = 0; i < xlsxx.length; i ++){
         text += "[" + xlsxx[i] + "]\n"
