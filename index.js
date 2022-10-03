@@ -70,11 +70,11 @@ ${text}</pre>
                 }
                 let text = ""
                 let textM = ""
-                for (let i = 0; i < arrStr[i].length; i++) {
-                    textM+="<td>"+arrStr[0][i]+"</td>"
+                for (let i = 0; i < "${xlsxx[0]}".split(",").length; i++) {
+                    textM += "<td>" + "${xlsxx[0]}".split(",")[i] + "</td>"
                 }
-                textM = "<tr>"+textM+"</tr>"
-                
+                textM = "<tr>" + textM + "</tr>"
+                c()
                 //j - количество столбцов
                 //i - количество строк
                 for (let i = 0; i < arrStr.length; i++) {

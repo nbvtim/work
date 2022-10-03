@@ -16,7 +16,7 @@
 <body>
 
     <div style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
-    <input type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_0.0.8 </span>
+    <input type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_0.0.23 </span>
     <pre style="color: rgb(186, 181, 255);">
 [,Марка ,Номер]
 [СФГ,SKODA OCTAVIA ,X 778 CH 124]
@@ -41,13 +41,13 @@
 [СФГ,FORD MUSTANG,X 795 MM 193]
 [СФГ,FORD MUSTANG,У 500 PM 193]
 [СФГ,TOYOTA CAMRY,K 986 BP 193]
-[СФГ, LADA GRANTA, Е 947 СУ 123]
-[СФГ, LADA LARGUS, M 168 EC 82]
-[СФГ, LADA LARGUS, M 920 MK 82]
-[СФГ, HYUNDAI SOLARIS, K 024 PK 123]
-[СФГ, LADA LARGUS, E 065 OH 193]
-[СФГ, LADA LARGUS, X 689 УА 123]
-[СФГ, VOLKSWAGEN POLO, в 275 CP 123]
+[СФГ,LADA GRANTA, Е 947 СУ 123]
+[СФГ,LADA LARGUS, M 168 EC 82]
+[СФГ,LADA LARGUS, M 920 MK 82]
+[СФГ,HYUNDAI SOLARIS, K 024 PK 123]
+[СФГ,LADA LARGUS, E 065 OH 193]
+[СФГ,LADA LARGUS, X 689 УА 123]
+[СФГ,VOLKSWAGEN POLO, в 275 CP 123]
 [СФГ, VOLKSWAGEN POLO, H 336 TH 123]
 [СФГ, VOLKSWAGEN POLO, E 935 XX 123]
 [СФГ, VOLKSWAGEN POLO, B 575 OH 193]
@@ -112,11 +112,11 @@
                 }
                 let text = ""
                 let textM = ""
-                for (let i = 0; i < arrStr[i].length; i++) {
-                    textM+="<td>"+arrStr[0][i]+"</td>"
+                for (let i = 0; i < ",Марка ,Номер".split(",").length; i++) {
+                    textM += "<td>" + ",Марка ,Номер".split(",")[i] + "</td>"
                 }
-                textM = "<tr>"+textM+"</tr>"
-                
+                textM = "<tr>" + textM + "</tr>"
+                c()
                 //j - количество столбцов
                 //i - количество строк
                 for (let i = 0; i < arrStr.length; i++) {
