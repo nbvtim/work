@@ -69,7 +69,12 @@ ${text}</pre>
                     arrStr.push((str1+str2).split(","))
                 }
                 let text = ""
-                let textM = "<tr><td>${xlsxx[0][0]}</td><td>${xlsxx[0][1]}</td><td>${xlsxx[0][2]}</td><td>${xlsxx[0][3]}</td><td>${xlsxx[0][4]}</td><td>${xlsxx[0][5]}</td><td>${xlsxx[0][6]}</td></tr>"
+                let textM = ""
+                for (let i = 0; i < arrStr[i].length; i++) {
+                    textM+="<td>"+arrStr[0][i]+"</td>"
+                }
+                textM = "<tr>"+textM+"</tr>"
+                
                 //j - количество столбцов
                 //i - количество строк
                 for (let i = 0; i < arrStr.length; i++) {

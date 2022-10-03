@@ -16,7 +16,7 @@
 <body>
 
     <div style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
-    <input type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_0.0.6 </span>
+    <input type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_0.0.8 </span>
     <pre style="color: rgb(186, 181, 255);">
 [,Марка ,Номер]
 [СФГ,SKODA OCTAVIA ,X 778 CH 124]
@@ -111,7 +111,12 @@
                     arrStr.push((str1+str2).split(","))
                 }
                 let text = ""
-                let textM = "<tr><td>undefined</td><td>Марка </td><td>Номер</td><td>undefined</td><td>undefined</td><td>undefined</td><td>undefined</td></tr>"
+                let textM = ""
+                for (let i = 0; i < arrStr[i].length; i++) {
+                    textM+="<td>"+arrStr[0][i]+"</td>"
+                }
+                textM = "<tr>"+textM+"</tr>"
+                
                 //j - количество столбцов
                 //i - количество строк
                 for (let i = 0; i < arrStr.length; i++) {
