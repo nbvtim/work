@@ -22,7 +22,7 @@ let htmlText = `
         td{
             font-size: 0.7em;
             border: 1px solid;
-            width: 50px;
+            width: 100px;
             font-family: sans-serif;
         }
     </style>
