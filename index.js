@@ -29,19 +29,20 @@ let htmlText = `
     <title>NBV</title>
 </head>
 <body>
-
-    <div style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
-    <input type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_${package_json.version} </span>
-    <pre style="color: rgb(186, 181, 255);">
+<input  class="tg_massage" type="text" >
+<button class="tg_button">Отправить в телеграм</button>
+<div    class="div" style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
+<input  class="input" type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_0.0.29 </span>
+<pre    class="pre" style="color: rgb(186, 181, 255);">
 ${text}</pre>
 
     <script>
     window.onload = function(){
         let 
             c = console.log
-            input = document.querySelector("input")
-            pre = document.querySelector("pre")
-            div = document.createElement("div")
+            input = document.querySelector(".input")
+            pre = document.querySelector(".pre")
+            div = document.createElement(".div")
 
         input.addEventListener("keyup", function(e){
             pozition = pre.innerText.indexOf(input.value)
@@ -92,11 +93,25 @@ ${text}</pre>
             }
         })
     }
+    // отправка сообщения в телеграм
+
+    // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/getUpdates - переходим по адресу
+    // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text=бот_напишет_себе
+    // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=-842465935&text=бот_напишет_в_группу
+
+    document.querySelector(".tg_button").onclick = function(){
+        const token = "5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM"
+        let massege = document.querySelector("tg_massage").value
+        let url = "https://api.telegram.org/bot" + token + ""/sendMessage?chat_id=-842465935&text="
+        let xhttp = new XMLHttpRequest()
+            xhttp.open("GET", url+massage , true)
+            xhttp.send()
+    }
     </script>
 </body>
 </html>
 `
-fs.writeFileSync("index.html",htmlText)
+fs.writeFileSync("index.html", htmlText)
 
 c(chalk.rgb(0,0,200).bold(`
 https://nbvtim.github.io/work/`))
