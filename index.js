@@ -102,13 +102,13 @@ ${text}</pre>
     
         document.querySelector(".tg_button").onclick = function(){
             const token = "5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM"
-            let message = document.querySelector(".tg_message").value
+            let message = document.querySelector(".tg_message")
             let url = "https://api.telegram.org/bot" + token + "/sendMessage?chat_id=-828320562&text="
             let xhttp = new XMLHttpRequest()
-            xhttp.open("GET", url + message , true)
+            xhttp.open("GET", url + message.value , true)
             xhttp.send()
             document.querySelector(".tg_button").style.display = "none"
-            document.querySelector(".tg_message").value = ""
+            message.value = ""
         }
     }
     
