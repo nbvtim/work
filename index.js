@@ -32,7 +32,7 @@ let htmlText = `
 <input  class="tg_message" type="text" >
 <button class="tg_button">Отправить в телеграм</button>
 <div    class="div" style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
-<input  class="input" type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_0.0.29 </span>
+<input  class="input" type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_${package_json.version} </span>
 <pre    class="pre" style="color: rgb(186, 181, 255);">
 ${text}</pre>
 
