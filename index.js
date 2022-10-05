@@ -19,6 +19,8 @@ let htmlText = `
 <head>
     <style>
         *{margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
+        body{margin: 10px 10px;}
+        label p{font-size: 0.7em;}
         td{
             font-size: 0.7em;
             border: 1px solid;
