@@ -3,6 +3,7 @@
 <html lang="ru">
 <head>
     <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
         td{
             font-size: 0.7em;
             border: 1px solid;
@@ -14,10 +15,13 @@
     <title>NBV</title>
 </head>
 <body>
-<input  class="tg_message" type="text" >
-<button class="tg_button">Отправить в телеграм</button>
+<label>
+    <input  class="tg_message" type="text" placeholder="что нужно изменить?">
+    <button class="tg_button">отправить</button>
+    <p>текст отправляется в <a href="https://web.telegram.org/k/#@Timnbv_bot">Telegram</a></p>
+</label>
 <div    class="div" style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
-<input  class="input" type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_0.0.60 </span>
+<input  class="input" type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_0.0.65 </span>
 <pre    class="pre" style="color: rgb(186, 181, 255);">
 [№ пропуска,№ парковки,Срок действия пропуска,Тип/модель,Государ-ственный номер,ФИО,Должность,Номер телефона]
 [1,АБК 13,14.12.21 31.12.22,Мерседес А 200,Х 796 ОО 123,Ломанова Татьяна Вячеславовна,Вед. мен. по продажам,8 928 457 34 41. 8 988 282 38 80]
@@ -241,8 +245,9 @@
     
         document.querySelector(".tg_button").onclick = function(){
             const token = "5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM"
+            const chat_id = "5131265599"
             let message = document.querySelector(".tg_message")
-            let url = "https://api.telegram.org/bot" + token + "/sendMessage?chat_id=5131265599&text="
+            let url = "https://api.telegram.org/bot" + token + "/sendMessage?chat_id=" + chat_id + "&text="
             let xhttp = new XMLHttpRequest()
             xhttp.open("GET", url + message.value , true)
             xhttp.send()

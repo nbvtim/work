@@ -18,6 +18,7 @@ let htmlText = `
 <html lang="ru">
 <head>
     <style>
+        *{margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
         td{
             font-size: 0.7em;
             border: 1px solid;
@@ -29,8 +30,11 @@ let htmlText = `
     <title>NBV</title>
 </head>
 <body>
-<input  class="tg_message" type="text" >
-<button class="tg_button">Отправить в телеграм</button>
+<label>
+    <input  class="tg_message" type="text" placeholder="что нужно изменить?">
+    <button class="tg_button">отправить</button>
+    <p>текст отправляется в <a href="https://web.telegram.org/k/#@Timnbv_bot">Telegram</a></p>
+</label>
 <div    class="div" style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
 <input  class="input" type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_${package_json.version} </span>
 <pre    class="pre" style="color: rgb(186, 181, 255);">
