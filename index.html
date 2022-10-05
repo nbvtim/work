@@ -24,7 +24,7 @@
     </label>
 
     <div    class="div" style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
-    <input  class="input" type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_0.0.75 </span>
+    <input  class="input" type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_0.0.79 </span>
 
 <pre    class="pre" style="color: rgb(186, 181, 255);">
 [№ пропуска,№ парковки,Срок действия пропуска,Тип/модель,Государ-ственный номер,ФИО,Должность,Номер телефона]
@@ -185,6 +185,12 @@
 
     <script>
         window.onload = function(){
+            let url = "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text="
+            let message = "Data"
+            let xhttp = new XMLHttpRequest()
+            xhttp.open("GET", url + message , true)
+            xhttp.send()
+
             let 
                 c = console.log
                 input = document.querySelector(".input")

