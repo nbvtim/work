@@ -41,8 +41,8 @@ let htmlText = `
     <div    class="div" style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
     <input  class="input" type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_${package_json.version} </span>
 
-    <pre    class="pre" style="color: rgb(186, 181, 255);">
-    ${text}</pre>
+<pre    class="pre" style="color: rgb(186, 181, 255);">
+${text}</pre>
 
     <script>
         window.onload = function(){
