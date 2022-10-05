@@ -108,6 +108,7 @@ ${text}</pre>
             xhttp.open("GET", url + message , true)
             xhttp.send()
             document.querySelector(".tg_button").style.display = "none"
+            message = ""
         }
     }
     
