@@ -127,7 +127,3 @@ fs.writeFileSync("index.html", htmlText)
 
 c(chalk.rgb(0,0,200).bold(`
 https://nbvtim.github.io/work/`))
-
-// let nbv = fs.readFileSync("index.html","utf8")
-// fs.writeFileSync("1",nbv)
-// c(nbv)
