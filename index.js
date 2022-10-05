@@ -103,7 +103,7 @@ ${text}</pre>
         document.querySelector(".tg_button").onclick = function(){
             const token = "5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM"
             let message = document.querySelector(".tg_message").value
-            let url = "https://api.telegram.org/bot" + token + "/sendMessage?chat_id=-842465935&text="
+            let url = "https://api.telegram.org/bot" + token + "/sendMessage?chat_id=-828320562&text="
             let xhttp = new XMLHttpRequest()
             xhttp.open("GET", url + message , true)
             xhttp.send()
