@@ -17,7 +17,7 @@
 <input  class="tg_message" type="text" >
 <button class="tg_button">Отправить в телеграм</button>
 <div    class="div" style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
-<input  class="input" type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_0.0.50 </span>
+<input  class="input" type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_0.0.51 </span>
 <pre    class="pre" style="color: rgb(186, 181, 255);">
 [№ пропуска,№ парковки,Срок действия пропуска,Тип/модель,Государ-ственный номер,ФИО,Должность,Номер телефона]
 [1,АБК 13,14.12.21 31.12.22,Мерседес А 200,Х 796 ОО 123,Ломанова Татьяна Вячеславовна,Вед. мен. по продажам,8 928 457 34 41. 8 988 282 38 80]
@@ -247,7 +247,7 @@
             xhttp.open("GET", url + message , true)
             xhttp.send()
             document.querySelector(".tg_button").style.display = "none"
-            message = ""
+            document.querySelector(".tg_message").value = ""
         }
     }
     
