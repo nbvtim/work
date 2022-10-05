@@ -29,7 +29,7 @@ let htmlText = `
     <title>NBV</title>
 </head>
 <body>
-<input  class="tg_massege" type="text" >
+<input  class="tg_message" type="text" >
 <button class="tg_button">Отправить в телеграм</button>
 <div    class="div" style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
 <input  class="input" type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_0.0.29 </span>
@@ -102,12 +102,10 @@ ${text}</pre>
     
         document.querySelector(".tg_button").onclick = function(){
             const token = "5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM"
-            let massege = document.querySelector(".tg_massege").value
-            c(massege)
+            let message = document.querySelector(".tg_message").value
             let url = "https://api.telegram.org/bot" + token + "/sendMessage?chat_id=-842465935&text="
-            c(url + massege)
             let xhttp = new XMLHttpRequest()
-            xhttp.open("GET", url + massege , true)
+            xhttp.open("GET", url + message , true)
             xhttp.send()
         }
     }
