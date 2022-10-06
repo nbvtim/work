@@ -20,7 +20,7 @@ let htmlText = `
     <style>
         *       {margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
         body    {margin: 10px 10px;}
-        .input  {color: blue; width: 100%;height: 3em;border-radius: 10px;background-color: rgb(139, 143, 255);padding: 10px;border: 5px solid rgb(255, 191, 191);}
+        .input  {color: rgb(255, 255, 255); font-weight:bolder; width: 100%;height: 3em;border-radius: 10px;background-color: rgb(139, 143, 255);padding: 10px;border: 5px solid rgb(255, 191, 191);}
         .input::-webkit-input-placeholder { color: rgb(255, 255, 255); font-weight:bolder;} 
         label p {font-size: 0.7em;}
         td      {font-size: 0.7em;border: 1px solid;width: 100px;font-family: sans-serif;}
@@ -37,16 +37,16 @@ let htmlText = `
     </label>
 
     <div    class="div" style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
-    <input  class="input" type="text" autofocus placeholder="ПОИСК v_${package_json.version}" value="">
+    <input  class="input" type="text" autofocus placeholder="ПОИСК v_${package_json.version}">
 
 <pre    class="pre" style="color: rgb(186, 181, 255);">
 ${text}</pre>
 
     <script>
+        let c = console.log
         window.onload = function(){
             let url = "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text="
-            let message = "Вход совершен: " + Date()
-            console.log(message)
+            let message = "------"
             let xhttp = new XMLHttpRequest()
             xhttp.open("GET", url + message , true)
             xhttp.send()
@@ -56,8 +56,11 @@ ${text}</pre>
                 input = document.querySelector(".input")
                 pre = document.querySelector(".pre")
                 div = document.createElement("div")
+                tg_message = document.querySelector(".tg_message")
+                
 
             input.addEventListener("keyup", function(e){
+
                 pozition = pre.innerText.indexOf(input.value)
                 let arr = []
                 while (input.value != "" && pozition != -1) {
@@ -100,9 +103,11 @@ ${text}</pre>
                     document.body.append(div)
                     pre.style.display = 'none'
                     div.style.display = 'block'
+                    tg_message.value = input.value
                 }else{
                     pre.style.display = 'block'
                     div.style.display = 'none'
+                    tg_message.value = ""
                 }
             })
 
