@@ -18,16 +18,11 @@ let htmlText = `
 <html lang="ru">
 <head>
     <style>
-        *{margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
-        body{margin: 10px 10px;}
-        .input{width: 100%;height: 3em;border-radius: 10px;background-color: rgb(139, 143, 255);padding: 10px;}
-        label p{font-size: 0.7em;}
-        td{
-            font-size: 0.7em;
-            border: 1px solid;
-            width: 100px;
-            font-family: sans-serif;
-        }
+        *       {margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
+        body    {margin: 10px 10px;}
+        .input  {width: 70%;height: 3em;border-radius: 10px;background-color: rgb(139, 143, 255);padding: 10px;border: 5px solid rgb(255, 191, 191);}
+        label p {font-size: 0.7em;}
+        td      {font-size: 0.7em;border: 1px solid;width: 100px;font-family: sans-serif;}
     </style>
     <meta charset="UTF-8">
     <title>NBV</title>
