@@ -20,6 +20,7 @@ let htmlText = `
     <style>
         *{margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
         body{margin: 10px 10px;}
+        .input{width: 100%;height: 3em;border-radius: 10px;background-color: rgb(139, 143, 255);padding: 10px;}
         label p{font-size: 0.7em;}
         td{
             font-size: 0.7em;
@@ -39,7 +40,7 @@ let htmlText = `
     </label>
 
     <div    class="div" style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
-    <input  class="input" type="text" alt="asds" autofocus placeholder="ПОИСК" value=""><span> v_${package_json.version} </span>
+    <input  class="input" type="text" autofocus placeholder="ПОИСК" value=""><span> v_${package_json.version} </span>
 
 <pre    class="pre" style="color: rgb(186, 181, 255);">
 ${text}</pre>
