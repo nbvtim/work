@@ -2,7 +2,7 @@ const
     c = console.log
     fs = require('fs')
     xlsx = require('node-xlsx')
-    xlsxx = xlsx.parse(fs.readFileSync(`${__dirname}/key.xlsx`))[0].data
+    xlsxx = xlsx.parse(fs.readFileSync(`${__dirname}/all.xlsx`))[0].data
     chalk = require("chalk") // npm install chalk@4.1.2
     text = ""
 /*система контроля версии*/
@@ -20,10 +20,12 @@ let htmlText = `
     <style>
         *       {margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
         body    {margin: 10px 10px;}
-        .input  {color: rgb(255, 255, 255); font-weight:bolder; width: 100%;height: 3em;border-radius: 10px;background-color: rgb(139, 143, 255);padding: 10px;border: 5px solid rgb(255, 191, 191);}
+        .input  {color: rgb(255, 255, 255); font-weight:bolder; width: 100%;height: 5em;border-radius: 10px;background-color: rgb(139, 143, 255);padding: 10px;border: 5px solid rgb(255, 191, 191);}
         .input::-webkit-input-placeholder { color: rgb(255, 255, 255); font-weight:bolder;} 
         label p {font-size: 0.7em;}
-        td      {font-size: 0.7em;border: 1px solid;width: 100px;font-family: sans-serif;}
+        table   {border-collapse: collapse;margin-top: 10px;}
+        td,th   {padding: 5px;font-size: 0.7em;font-family: sans-serif;border: 1px solid rgb(128, 128, 128);}
+        th      {background-color: rgb(212, 212, 212);}
     </style>
     <link rel="icon" href="favicon.svg">
     <meta charset="UTF-8">
@@ -87,7 +89,7 @@ ${text}</pre>
                     let text = ""
                     let textM = ""
                     for (let i = 0; i < "${xlsxx[0]}".split(",").length; i++) {
-                        textM += "<td>" + "${xlsxx[0]}".split(",")[i] + "</td>"
+                        textM += "<th>" + "${xlsxx[0]}".split(",")[i] + "</th>"
                     }
                     textM = "<tr>" + textM + "</tr>"
                     c()
