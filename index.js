@@ -39,6 +39,8 @@ let htmlText = `
 ${text}</pre>
 
     <script> let c = console.log
+    localStorage.setItem("auto",\`${text}\`)
+
         window.onload = function(){
             let 
                 c = console.log
