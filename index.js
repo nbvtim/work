@@ -104,8 +104,7 @@ ${text}</pre>
                 }
             })
 
-
-            // отправка сообщения в телеграм
+// отправка сообщения в телеграм
 
             // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/getUpdates - переходим по адресу
             // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text=бот_напишет_себе
