@@ -78,7 +78,6 @@ ${text}</pre>
                         textM += "<th>" + "${xlsxx[0]}".split(",")[i] + "</th>"
                     }
                     textM = "<tr>" + textM + "</tr>"
-                    c()
                     //j - количество столбцов
                     //i - количество строк
                     for (let i = 0; i < arrStr.length; i++) {
@@ -108,7 +107,7 @@ ${text}</pre>
             document.querySelector(".tg_button").onclick = function(){
                 let url = "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text="
                 let xhttp = new XMLHttpRequest()
-                xhttp.open("GET", url + document.querySelector(".tg_message").value , true)
+                xhttp.open("GET", url + document.querySelector(".tg_message").value, true)
                 xhttp.send()
                 document.querySelector(".tg_button").style.display = "none"
                 message.value = ""
