@@ -19,10 +19,11 @@
 <body>
 
 
-    <div>
+    <!-- <div>
         <input type="text" class="local_txt" placeholder="Введите имя">
         <button class="local_button">Подтвердить</button>
-    </div>
+    </div> -->
+    
     <label>
         <input  class="tg_message" type="text" placeholder="что нужно изменить?">
         <button class="tg_button">отправить</button>
@@ -220,13 +221,13 @@
 
     <script> let c = console.log
         window.onload = function(){
-            
+/*            
             document.querySelector(".local_button").addEventListener("click", function(e){
                 let name = ''
                 
                 name = document.querySelector(".local_txt").value
                 localStorage.setItem(name, name)
-                
+
                 let message = localStorage.getItem(name)
                 let url = "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text="
                 let xhttp = new XMLHttpRequest()
@@ -234,7 +235,7 @@
                 xhttp.send()
                 document.querySelector(".local_txt").value = ''
             })
-
+*/
             let 
                 c = console.log
                 input = document.querySelector(".input")
@@ -304,11 +305,9 @@
         
             document.querySelector(".tg_button").onclick = function(){
                 let url = "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text="
-
                 let xhttp = new XMLHttpRequest()
                 xhttp.open("GET", url + document.querySelector(".tg_message").value , true)
                 xhttp.send()
-
                 document.querySelector(".tg_button").style.display = "none"
                 message.value = ""
             }
