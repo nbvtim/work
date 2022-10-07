@@ -20,7 +20,7 @@ let htmlText = `
         .input::-webkit-input-placeholder { color: rgb(255, 255, 255); font-weight:bolder;} 
         label p {font-size: 0.7em;}
         table   {border-collapse: collapse;width: 100%;}
-        td,th   {padding: 5px;font-size: 0.7em;font-family: sans-serif;border: 1px solid rgb(128, 128, 128);}
+        td,th   {padding: 5px;font-size: 0.7em;border: 1px solid rgb(128, 128, 128);}
         th      {background-color: rgb(212, 212, 212);}
     </style>
     <link rel="icon" href="favicon.svg">
