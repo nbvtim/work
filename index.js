@@ -7,7 +7,7 @@ const
     text = ""
 
 for(i = 0; i < xlsxx.length; i ++){
-        text += "[" + xlsxx[i] + "]\n"
+    text += "[" + xlsxx[i] + "]\n"
 }
 let htmlText = `
 <!DOCTYPE html>
@@ -19,7 +19,7 @@ let htmlText = `
         .input  {color: rgb(255, 255, 255); font-weight:bolder; width: 100%;height: 5em;border-radius: 10px;background-color: rgb(139, 143, 255);padding: 10px;border: 5px solid rgb(255, 191, 191);}
         .input::-webkit-input-placeholder { color: rgb(255, 255, 255); font-weight:bolder;} 
         label p {font-size: 0.7em;}
-        table   {border-collapse: collapse;margin-top: 10px;}
+        table   {border-collapse: collapse;margin-top: 10px;width: 100%;}
         td,th   {padding: 5px;font-size: 0.7em;font-family: sans-serif;border: 1px solid rgb(128, 128, 128);}
         th      {background-color: rgb(212, 212, 212);}
     </style>
@@ -28,6 +28,12 @@ let htmlText = `
     <title>NBV</title>
 </head>
 <body>
+
+
+    <div>
+        <input type="text" class="local_txt" placeholder="Введите имя">
+        <button class="local_button">Подтвердить</button>
+    </div>
     <label>
         <input  class="tg_message" type="text" placeholder="что нужно изменить?">
         <button class="tg_button">отправить</button>
@@ -40,14 +46,22 @@ let htmlText = `
 <pre    class="pre" style="color: rgb(186, 181, 255);">
 ${text}</pre>
 
-    <script>
-        let c = console.log
+    <script> let c = console.log
         window.onload = function(){
-            let url = "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text="
-            let message = "------"
-            let xhttp = new XMLHttpRequest()
-            xhttp.open("GET", url + message , true)
-            xhttp.send()
+            
+            document.querySelector(".local_button").addEventListener("click", function(e){
+                let name = ''
+                
+                name = document.querySelector(".local_txt").value
+                localStorage.setItem(name, name)
+                
+                let message = localStorage.getItem(name)
+                let url = "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text="
+                let xhttp = new XMLHttpRequest()
+                xhttp.open("GET", url + message , true)
+                xhttp.send()
+                document.querySelector(".local_txt").value = ''
+            })
 
             let 
                 c = console.log
@@ -117,17 +131,18 @@ ${text}</pre>
             // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=-842465935&text=бот_напишет_в_группу
         
             document.querySelector(".tg_button").onclick = function(){
-                const token = "5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM"
-                const chat_id = "5131265599"
-                let message = document.querySelector(".tg_message")
-                let url = "https://api.telegram.org/bot" + token + "/sendMessage?chat_id=" + chat_id + "&text="
+                let url = "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text="
+
                 let xhttp = new XMLHttpRequest()
-                xhttp.open("GET", url + message.value , true)
+                xhttp.open("GET", url + document.querySelector(".tg_message").value , true)
                 xhttp.send()
+
                 document.querySelector(".tg_button").style.display = "none"
                 message.value = ""
             }
         }
+
+
     </script>
 </body>
 </html>
