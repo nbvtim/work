@@ -16,10 +16,10 @@ let htmlText = `
     <style>
         *       {margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
         body    {margin: 10px 10px;}
-        .input  {color: rgb(255, 255, 255); font-weight:bolder; width: 100%;height: 5em;border-radius: 10px;background-color: rgb(139, 143, 255);padding: 10px;border: 5px solid rgb(255, 191, 191);}
+        .input  {margin: 10px 0px; color: rgb(255, 255, 255); font-weight:bolder; width: 50%;height: 5em;border-radius: 10px;background-color: rgb(139, 143, 255);padding: 10px;border: 5px solid rgb(255, 191, 191);}
         .input::-webkit-input-placeholder { color: rgb(255, 255, 255); font-weight:bolder;} 
         label p {font-size: 0.7em;}
-        table   {border-collapse: collapse;margin-top: 10px;width: 100%;}
+        table   {border-collapse: collapse;width: 100%;}
         td,th   {padding: 5px;font-size: 0.7em;font-family: sans-serif;border: 1px solid rgb(128, 128, 128);}
         th      {background-color: rgb(212, 212, 212);}
     </style>
@@ -29,29 +29,25 @@ let htmlText = `
 </head>
 <body>
 
-
-    <label>
+    <div><label>
         <input  class="tg_message" type="text" placeholder="что нужно изменить?">
         <button class="tg_button">отправить</button>
-        <p>текст отправляется в <a href="https://web.telegram.org/k/#@Timnbv_bot">Telegram</a></p>
-    </label>
+    </label></div>
 
-    <div    class="div" style="color: #b5baff; font-size: .2em;">@Tim_Yaitskikh Mail: exelent206@gmail.com Telegram: @Tim_ax</div>
-    <input  class="input" type="text" autofocus placeholder="ПОИСК">
+    <input  class="input" type="text" autofocus placeholder="ПОИСК ПО АВТОТРАНСПОРТУ"><input  class="input" type="text" autofocus placeholder="ПОИСК ПО КЛЮЧАМ">
 
-<pre    class="pre" style="color: rgb(186, 181, 255);">
+<pre class="pre" style="color: rgb(186, 181, 255); display: none;">
 ${text}</pre>
 
     <script> let c = console.log
         window.onload = function(){
             let 
                 c = console.log
-                input = document.querySelector(".input")
+                input = document.querySelectorAll(".input")[0]
                 pre = document.querySelector(".pre")
                 div = document.createElement("div")
                 tg_message = document.querySelector(".tg_message")
                 
-
             input.addEventListener("keyup", function(e){
 
                 pozition = pre.innerText.indexOf(input.value)
@@ -98,7 +94,7 @@ ${text}</pre>
                     div.style.display = 'block'
                     tg_message.value = input.value
                 }else{
-                    pre.style.display = 'block'
+                    pre.style.display = 'none'//
                     div.style.display = 'none'
                     tg_message.value = ""
                 }
