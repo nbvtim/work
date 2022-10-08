@@ -29,7 +29,7 @@ let htmlText = `
 </head>
 <body>
 
-    <div><label>
+    <div class="tg_div"><label>
         <input  class="tg_message" type="text" placeholder="что нужно изменить?">
         <button class="tg_button">отправить</button>
     </label></div>
@@ -39,14 +39,33 @@ let htmlText = `
 ${text}</pre>
 
     <script> let c = console.log
+
         window.onload = function(){
             let 
-                c = console.log
                 input = document.querySelectorAll(".input")[0]
                 pre = document.querySelector(".pre")
                 div = document.createElement("div")
                 tg_message = document.querySelector(".tg_message")
-                
+// типо регистрация
+            if(localStorage.getItem("name")){
+                let div = document.createElement("div")
+                div.innerHTML = "Вы зашли под именем : " + localStorage.getItem("name") + " <button>Удалить</button>"
+                document.body.prepend(div)
+                document.querySelector("button").addEventListener("click", function(){
+                    localStorage.removeItem('name')
+                })
+            }else{
+                input.style.display = "none"
+                let div = document.createElement("div")
+                div.innerHTML = "<input type='text' placeholder='Введите имя'>"+" <button>Подтвердить</button>"
+                document.body.prepend(div)
+                document.querySelector("button").addEventListener("click", function(){
+                    localStorage.setItem("name", document.querySelector("input").value)
+                    div.style.display = "none"
+                    document.querySelector(".tg_div").style.display = "none"
+                })
+            }
+// Поиск
             input.addEventListener("keyup", function(e){
 
                 pozition = pre.innerText.indexOf(input.value)
@@ -107,7 +126,7 @@ ${text}</pre>
             document.querySelector(".tg_button").onclick = function(){
                 let url = "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text="
                 let xhttp = new XMLHttpRequest()
-                xhttp.open("GET", url + document.querySelector(".tg_message").value, true)
+                xhttp.open("GET", url + localStorage.getItem("name") +":%7B" + document.querySelector(".tg_message").value + "%7D", true)
                 xhttp.send()
                 document.querySelector(".tg_button").style.display = "none"
                 message.value = ""

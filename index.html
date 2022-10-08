@@ -18,7 +18,7 @@
 </head>
 <body>
 
-    <div><label>
+    <div class="tg_div"><label>
         <input  class="tg_message" type="text" placeholder="что нужно изменить?">
         <button class="tg_button">отправить</button>
     </label></div>
@@ -87,7 +87,7 @@
 [Линия 3. поле,KIA SHUMA 11,У 318 ЕЕ 123,Митляева Ирина Олеговна,ХС. супервайзер,8-950-966-11-19]
 [Линия 3,ОПЕЛЬ АСТРА,Е 391 ЕО 193,Кириакиди Вера Николаевна,Зам.гл. бухгалтера,8-928-259-79-57]
 [Линия 3,HYUNDAI  IX 35,У 611 ТА 123,Мохнаткина Ольга Владимировна,Бухгалтер-калькулятор,8-988-237-10-37]
-[Линия 3,Форд Мондео,М 851 ВН134,Шестерня Александр Игоревич,Администратор пляжа,8-988-281-74-47]
+[Линия 3,Форд Мондео,М 851 ВН 134,Шестерня Александр Игоревич,Администратор пляжа,8-988-281-74-47]
 [Линия 3,ТОЙОТА РАКТИС,Е 136 ВВ 193,Васильева Светлана Валерьевна,ХС. супервайзер,8-905-954-40-55]
 [БФ сменный,Шкода Октавия,К 422 ВМ 29,Гереева Екатерина Алексеевна,СООП. су-шеф кондитер,8-960-019-18-19]
 [БФ сменный,Форд Фокус,Р 204 СС 123,Румянцева Шарлотта Артуровна,СООП. су-шеф кондитер,8-999-656-46-96]
@@ -98,7 +98,7 @@
 [БФ,КИА РИО,Р 631 ЕА 193,Гришаева Нина Александровна,Бухгалтер по учету ТМЦ,8-967-319-42-28]
 [Линия 3,Мицубиси Оутлендер,М 568 СМ 123,Сапожникова Людмила Николаевна,ФИН служба бухгалтер-кассир,8-988-504-47-24]
 [Линия 3,Хендай Солярис,К 233 ВР 193,Стародубова Кира Владимировна,Специалист отд. бронирования,8-996-405-60-91]
-[Линия 3,Мицубиси Лансер,М 233 НУ134,Герасина Марина Анатольевна,СООП-ресторан официант,8-918-106-60-18]
+[Линия 3,Мицубиси Лансер,М 233 НУ 134,Герасина Марина Анатольевна,СООП-ресторан официант,8-918-106-60-18]
 [Линия 4,Ниссан Ноут,А 071 ВЕ 164,Трушина Ольга Николаевна,ДОСУГ артист,8-927-124-60-26]
 [_,Хендай Санта Фе,Т 690 АО 123,Дятлов Евгений Юрьевич,ИП Дятлова Т.И.,8-918-359-96-98 Евгений  8-989-160-60-99 Юлия Парамок]
 [_,Чери Тигго 8 PRO Т31FPL4,К 170 ВК 193,Дятлов Евгений Юрьевич,ИП Дятлова Т.И.,8-918-359-96-98 Евгений  8-989-160-60-99 Юлия Парамок]
@@ -208,13 +208,32 @@
 </pre>
 
     <script> let c = console.log
+
         window.onload = function(){
             let 
-                c = console.log
                 input = document.querySelectorAll(".input")[0]
                 pre = document.querySelector(".pre")
                 div = document.createElement("div")
                 tg_message = document.querySelector(".tg_message")
+// типо регистрация
+            if(localStorage.getItem("name")){
+                let div = document.createElement("div")
+                div.innerHTML = "Вы зашли под именем : " + localStorage.getItem("name") + " <button>Удалить</button>"
+                document.body.prepend(div)
+                document.querySelector("button").addEventListener("click", function(){
+                    localStorage.removeItem('name')
+                })
+            }else{
+                input.style.display = "none"
+                let div = document.createElement("div")
+                div.innerHTML = "<input type='text' placeholder='Введите имя'>"+" <button>Подтвердить</button>"
+                document.body.prepend(div)
+                document.querySelector("button").addEventListener("click", function(){
+                    localStorage.setItem("name", document.querySelector("input").value)
+                    div.style.display = "none"
+                    document.querySelector(".tg_div").style.display = "none"
+                })
+            }
                 
             input.addEventListener("keyup", function(e){
 
@@ -276,7 +295,7 @@
             document.querySelector(".tg_button").onclick = function(){
                 let url = "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text="
                 let xhttp = new XMLHttpRequest()
-                xhttp.open("GET", url + document.querySelector(".tg_message").value, true)
+                xhttp.open("GET", url + localStorage.getItem("name") +":%7B" + document.querySelector(".tg_message").value + "%7D", true)
                 xhttp.send()
                 document.querySelector(".tg_button").style.display = "none"
                 message.value = ""
