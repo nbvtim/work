@@ -119,22 +119,20 @@ ${text}</pre>
             })
 
 // отправка сообщения в телеграм
-
-            // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/getUpdates - переходим по адресу
-            // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text=бот_напишет_себе
-            // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=-842465935&text=бот_напишет_в_группу
-        
             document.querySelector(".tg_button").onclick = function(){
                 send_tg(localStorage.getItem("name") +":%7B" + document.querySelector(".tg_message").value + "%7D")
                 document.querySelector(".tg_button").style.display = "none"
                 message.value = ""
             }
         }
-        function send_tg(text){
-            let xhttp = new XMLHttpRequest()
-            xhttp.open("GET", "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text=" + text, true)
-            xhttp.send()
-        }
+function send_tg(text){
+    // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/getUpdates - переходим по адресу
+    // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text=бот_напишет_себе
+    // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=-842465935&text=бот_напишет_в_группу
+    let xhttp = new XMLHttpRequest()
+    xhttp.open("GET", "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text=" + text, true)
+    xhttp.send()
+}
 
     </script>
 </body>
