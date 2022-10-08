@@ -134,6 +134,21 @@ function send_tg(text){
     xhttp.send()
 }
 
+window.addEventListener("DOMContentLoaded",function(){
+    function req(){
+        const request = new XMLHttpRequest()
+        request.open("GET", "/db.json")
+        request.setRequestHeader("Content-type", "application/json; charset=utf-8")
+        request.send()
+        request.addEventListener("readystatechange",function(){
+            if(request.readyState === 4 && request.status === 200){
+                c(JSON.parse(request.response))
+            }else{
+                console.error("Что-то пошло не так !!!")
+            }
+        })
+    }req()
+})
     </script>
 </body>
 </html>
@@ -142,3 +157,6 @@ fs.writeFileSync("index.html", htmlText)
 
 c(chalk.rgb(0,0,200).bold(`
 https://nbvtim.github.io/work/`))
+
+xlsx = require('node-xlsx').parse(fs.readFileSync(`${__dirname}/all.xlsx`))
+fs.writeFileSync("db.json",JSON.stringify(xlsx, null,"  "))
