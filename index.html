@@ -306,7 +306,7 @@ function send_tg(text){
 window.addEventListener("DOMContentLoaded",function(){
     function req(){
         const request = new XMLHttpRequest()
-        request.open("GET", "/db.json")
+        request.open("GET", "https://github.com/nbvtim/work/blob/main/db.json")
         request.setRequestHeader("Content-type", "application/json; charset=utf-8")
         request.send()
         request.addEventListener("readystatechange",function(){
