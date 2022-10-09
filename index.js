@@ -20,7 +20,7 @@ let htmlText = `
 }
         *       {margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
         body    {margin: 10px 10px;}
-        .input  {margin: 10px 0px; color: rgb(255, 255, 255); font-weight:bolder; width: 35%;height: 5em;border-radius: 10px;background-color: rgb(139, 143, 255);padding: 10px;border: 5px solid rgb(255, 191, 191);}
+        .input  {font-size: 1em; margin: 10px 0px; color: rgb(255, 255, 255); font-weight:bolder; width: 35%;height: 5em;border-radius: 10px;background-color: rgb(139, 143, 255);padding: 10px;border: 5px solid rgb(255, 191, 191);}
         .input::-webkit-input-placeholder {color: rgb(255, 255, 255); font-weight:bolder;} 
         label p {font-size: 0.7em;}
         table   {border-collapse: collapse;width: 100%;}
@@ -28,7 +28,7 @@ let htmlText = `
         th      {background-color: rgb(212, 212, 212);}
         .tg_div {margin-top: 10px;}
         .tg_message {border: 5px solid rgb(167, 167, 167); width: 30%; height: 40px;border-radius: 10px 0px 0px 10px;font-size: 1em;padding-left: 10px;}
-        .tg_button  {border: 5px solid rgb(167, 167, 167); width: 5%; background-color: rgb(167, 167, 167); height: 40px;border-radius: 0px 10px 10px 0px;font-size: .8em}
+        .tg_button  {background-color: rgb(167, 167, 167);height: 40px;width: 40px;border: none;}
     </style>
     <link rel="icon" href="favicon.svg">
     <meta charset="UTF-8">
@@ -41,6 +41,7 @@ let htmlText = `
     </label></div>
 
     <input  class="input" type="text" autofocus placeholder="ПОИСК ПО АВТОТРАНСПОРТУ">
+
 <pre class="pre" style="color: rgb(186, 181, 255); display: none;">
 ${text}</pre>
 
