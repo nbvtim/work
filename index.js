@@ -58,7 +58,7 @@ ${text}</pre>
                 document.querySelector("button").addEventListener("click", function(){
                     localStorage.removeItem('name')
                 })
-                send_tg(" --- " + localStorage.getItem("name") + " --- ")
+                send_tg(" >>> " + localStorage.getItem("name") + " <<< ")
             }else{
                 input.style.display = "none"
                 let div = document.createElement("div")
