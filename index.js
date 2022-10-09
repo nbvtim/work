@@ -133,22 +133,6 @@ function send_tg(text){
     xhttp.open("GET", "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text=" + text, true)
     xhttp.send()
 }
-
-// window.addEventListener("DOMContentLoaded",function(){
-//     function req(){
-//         const request = new XMLHttpRequest()
-//         request.open("GET", "https://github.com/nbvtim/work/blob/main/db.json")
-//         request.setRequestHeader("Content-type", "application/json; charset=utf-8")
-//         request.send()
-//         request.addEventListener("readystatechange",function(){
-//             if(request.readyState === 4 && request.status === 200){
-//                 c(JSON.parse(request.response))
-//             }else{
-//                 console.error("Что-то пошло не так !!!")
-//             }
-//         })
-//     }req()
-// })
     </script>
 </body>
 </html>
