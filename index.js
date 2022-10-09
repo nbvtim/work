@@ -15,7 +15,7 @@ let htmlText = `
 <head>
     <style>
         *       {margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
-        body    {margin: 10px 10px;}
+        body    {padding: 10px 10px;}
         .input  {margin: 10px 0px; color: rgb(255, 255, 255); font-weight:bolder; width: 100%;height: 5em;border-radius: 10px;background-color: rgb(139, 143, 255);padding: 10px;border: 5px solid rgb(255, 191, 191);}
         .input::-webkit-input-placeholder { color: rgb(255, 255, 255); font-weight:bolder;} 
         label p {font-size: 0.7em;}
