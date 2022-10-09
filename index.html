@@ -6,7 +6,7 @@
         :active, :hover, :focus {outline: 0;outline-offset: 0;}
         *       {margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
         body    {margin: 10px 10px;}
-        .input  {font-size: 1em; font-weight:bolder; width: 35%;height: 40px;padding: 10px;}
+        .input  {font-size: 1em; font-weight:bolder; width: 35%;height: 40px;padding: 10px;margin-bottom: 10px;}
         .input::-webkit-input-placeholder {color: rgb(255, 255, 255); font-weight:bolder;} 
         label p {font-size: 0.7em;}
         table   {border-collapse: collapse; width: 100%;}
@@ -223,7 +223,7 @@
                 document.querySelector("button").addEventListener("click", function(){
                     localStorage.removeItem('name')
                 })
-                send_tg("Вход: "+localStorage.getItem("name"))
+                send_tg(" --- " + localStorage.getItem("name") + " --- ")
             }else{
                 input.style.display = "none"
                 let div = document.createElement("div")
@@ -291,7 +291,7 @@
             document.querySelector(".tg_button").onclick = function(){
                 send_tg(localStorage.getItem("name") +":%7B" + document.querySelector(".tg_message").value + "%7D")
                 document.querySelector(".tg_button").style.display = "none"
-                message.value = ""
+                tg_message.value = ""
             }
         }
 function send_tg(text){
