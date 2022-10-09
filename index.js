@@ -34,7 +34,8 @@ let htmlText = `
 <body>
 
     <div class="tg_div">
-        <input  class="tg_message" type="text" placeholder="Что нужно изменить? &#9997"><button class="tg_button">&#10004;&#65039;</button> 
+        <input  class="tg_message" type="text" placeholder="Что нужно изменить? &#9997">
+        <button class="tg_button">&#10004;</button> 
     </div>
 
     <input  class="input" type="text" autofocus placeholder="ПОИСК ПО АВТОТРАНСПОРТУ">
