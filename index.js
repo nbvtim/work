@@ -18,7 +18,7 @@ let htmlText = `
         *       {margin: 0;padding: 0;box-sizing: border-box;font-family: sans-serif;}
         body    {margin: 10px 10px;}
         .input  {font-size: 1em; font-weight:bolder; width: 35%;height: 40px;padding: 10px;margin-bottom: 10px;}
-        .input::-webkit-input-placeholder {color: rgb(0, 0, 0); font-weight:bolder;} 
+        .input::-webkit-input-placeholder {color: rgb(97, 102, 255);} 
         label p {font-size: 0.7em;}
         table   {border-collapse: collapse; width: 100%;}
         td,th   {padding: 5px;font-size: 0.7em;border: 1px solid rgb(128, 128, 128);}
@@ -34,8 +34,7 @@ let htmlText = `
 <body>
 
     <div class="tg_div">
-        <input  class="tg_message" type="text" placeholder="Что нужно изменить? &#9997">
-        <button class="tg_button">&#10004;</button> 
+        <input  class="tg_message" type="text" placeholder="Что нужно изменить? &#9997"><!-- --><button class="tg_button">&#10004;</button> 
     </div>
 
     <input  class="input" type="text" autofocus="" placeholder="ПОИСК ПО АВТОТРАНСПОРТУ">
