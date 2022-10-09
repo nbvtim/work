@@ -130,13 +130,14 @@ ${text}</pre>
             }
         }
 function send_tg(text){
-    // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/getUpdates - переходим по адресу
-    // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text=бот_напишет_себе
-    // https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=-842465935&text=бот_напишет_в_группу
+    // https://api.telegram.org/bot5624303376:AAHW9oj4Nv7xsD4-L8wYTmHq1dvGiW33uNE/getUpdates - переходим по адресу
+    // https://api.telegram.org/bot5624303376:AAHW9oj4Nv7xsD4-L8wYTmHq1dvGiW33uNE/sendMessage?chat_id=5131265599&text=бот_напишет_себе
+    // https://api.telegram.org/bot5624303376:AAHW9oj4Nv7xsD4-L8wYTmHq1dvGiW33uNE/sendMessage?chat_id=-842465935&text=бот_напишет_в_группу
     let xhttp = new XMLHttpRequest()
-    xhttp.open("GET", "https://api.telegram.org/bot5465151197:AAEo00Fhed2kh8jn_4T_0OYyvCoukbiwjkM/sendMessage?chat_id=5131265599&text=" + text, true)
+    xhttp.open("GET", "https://api.telegram.org/bot5624303376:AAHW9oj4Nv7xsD4-L8wYTmHq1dvGiW33uNE/sendMessage?chat_id=5131265599&text=" + text, true)
     xhttp.send()
 }
+
     </script>
 </body>
 </html>
