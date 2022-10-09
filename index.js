@@ -147,5 +147,5 @@ fs.writeFileSync("index.html", htmlText)
 c(chalk.rgb(0,0,200).bold(`
 https://nbvtim.github.io/work/`))
 
-xlsx = require('node-xlsx').parse(fs.readFileSync(`${__dirname}/all.xlsx`))
-fs.writeFileSync("db.json",JSON.stringify(xlsx, null,"  "))
+//xlsx = require('node-xlsx').parse(fs.readFileSync(`${__dirname}/all.xlsx`))
+//fs.writeFileSync("db.json",JSON.stringify(xlsx, null,"  "))
