@@ -7,7 +7,7 @@ const
     text = ""
 
 for(i = 0; i < xlsxx.length; i ++){
-    text += "[" + xlsxx[i] + "]\n"
+    text += '"' + xlsxx[i] + '"\n'
 }
 let htmlText = `
 <!DOCTYPE html>
@@ -86,11 +86,11 @@ ${text}</pre>
                         let str1=""
                         let str2=""
                         for( i = arr[j]; i < pre.innerText.length; i++){
-                            if(pre.innerText[i] === "]"){break}
+                            if(pre.innerText[i] === '"'){break}
                             else{str2 += pre.innerText[i]}
                         }
                         for( i = arr[j]; i < pre.innerText.length; i--){
-                            if(pre.innerText[i-1] === "["){break}
+                            if(pre.innerText[i-1] === '"'){break}
                             else{str1 += pre.innerText[i-1]}
                         }
                         str1 = str1.split('').reverse().join('')   
@@ -149,3 +149,6 @@ https://nbvtim.github.io/work/`))
 
 //xlsx = require('node-xlsx').parse(fs.readFileSync(`${__dirname}/all.xlsx`))
 //fs.writeFileSync("db.json",JSON.stringify(xlsx, null,"  "))
+
+let str = "йцукен ЙЦУКЕН qwerty QWERTY".match(/Q/)
+c(str.input)
