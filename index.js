@@ -43,6 +43,7 @@ let htmlText = `
 ${text}</pre>
 
     <script> let c = console.log
+    localStorage.clear()
 
         window.onload = function(){
             let 
@@ -50,26 +51,7 @@ ${text}</pre>
                 pre = document.querySelector(".pre")
                 div = document.createElement("div")
                 tg_message = document.querySelector(".tg_message")
-// типо регистрация
-            if(localStorage.getItem("name")){
-                let div = document.createElement("div")
-                div.innerHTML = "Вы зашли под именем : " + localStorage.getItem("name") + " <button>Удалить</button>"
-                document.body.prepend(div)
-                document.querySelector("button").addEventListener("click", function(){
-                    localStorage.removeItem('name')
-                })
-                send_tg(" >>> " + localStorage.getItem("name") + " <<< ")
-            }else{
-                input.style.display = "none"
-                let div = document.createElement("div")
-                div.innerHTML = "<input type='text' placeholder='Введите имя'>"+" <button>Подтвердить</button>"
-                document.body.prepend(div)
-                document.querySelector("button").addEventListener("click", function(){
-                    localStorage.setItem("name", document.querySelector("input").value)
-                    div.style.display = "none"
-                    document.querySelector(".tg_div").style.display = "none"
-                })
-            }
+
 // Поиск
             input.addEventListener("keyup", function(e){
 
