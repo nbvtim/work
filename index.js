@@ -35,7 +35,7 @@ let htmlText = `
 
     <div class="tg_div">
         <input  class="tg_message" type="text" placeholder="Что нужно изменить? &#9997"><!-- --><button class="tg_button">&#10004;</button>
-        <a style="font-size: 1.5em; text-decoration: none;" href="C:/Users/User/Desktop/xxx/nbv.html">&#127759;</a>
+        <a style="font-size: 1.5em; text-decoration: none;" href="/">&#127759;</a>
     </div>
 
     <input  class="input" type="text" autofocus="" placeholder="ПОИСК ПО АВТОТРАНСПОРТУ">
@@ -107,7 +107,7 @@ ${text}</pre>
 
 // отправка сообщения в телеграм
             document.querySelector(".tg_button").onclick = function(){
-                send_tg(localStorage.getItem("name") +":%7B" + document.querySelector(".tg_message").value + "%7D")
+                send_tg(document.querySelector(".tg_message").value)
                 document.querySelector(".tg_button").style.display = "none"
                 tg_message.value = ""
             }

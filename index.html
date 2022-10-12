@@ -24,14 +24,14 @@
 
     <div class="tg_div">
         <input  class="tg_message" type="text" placeholder="Что нужно изменить? &#9997"><!-- --><button class="tg_button">&#10004;</button>
-        <a style="font-size: 1.5em; text-decoration: none;" href="C:/Users/User/Desktop/xxx/nbv.html">&#127759;</a>
+        <a style="font-size: 1.5em; text-decoration: none;" href="/">&#127759;</a>
     </div>
 
     <input  class="input" type="text" autofocus="" placeholder="ПОИСК ПО АВТОТРАНСПОРТУ">
 
 <pre class="pre" style="color: rgb(186, 181, 255); display: none;">
 "№ парковки,Тип/модель,Государственный номер,ФИО,Должность,Номер-телефона"
-"Поле КПП5,Ниссан Террано,С 474 ВК 193,Емельянова Оксана Владимировна,Менеджер по закупкам,8-928-457-08-22  8-928-259-02-37"
+"Поле КПП5,Ниссан Террано,Т 335 ВК 193,Емельянова Оксана Владимировна,Менеджер по закупкам,8-928-457-08-22  8-928-259-02-37"
 "БФ,Хендай Солярис,О 944 ОТ 123,Катричук Алексей Александрович,Начальник смены СВК,8-988-403-76-21"
 "БФ,Фольксваген Getta,К 203 СУ 123,Щеглов Виталий Сергеевич,Менеджер по закупкам,8-928-850-17-95  8-918-104-19-66"
 "БФ,КИА Церато,О 297 ОЕ 123,Бардацкая Наталья Анатольевна,Кладовщик,8-918-905-56-95"
@@ -274,7 +274,7 @@
 
 // отправка сообщения в телеграм
             document.querySelector(".tg_button").onclick = function(){
-                send_tg(localStorage.getItem("name") +":%7B" + document.querySelector(".tg_message").value + "%7D")
+                send_tg(document.querySelector(".tg_message").value)
                 document.querySelector(".tg_button").style.display = "none"
                 tg_message.value = ""
             }
