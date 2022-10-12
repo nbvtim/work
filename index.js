@@ -2,7 +2,7 @@ const
     c = console.log
     fs = require('fs')
     xlsx = require('node-xlsx')
-    xlsxx = xlsx.parse(fs.readFileSync(`${__dirname}/all.xlsx`))[0].data
+    xlsxx = xlsx.parse(fs.readFileSync(`C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all.xlsx`))[0].data
     chalk = require("chalk") // npm install chalk@4.1.2
     text = ""
 
@@ -132,6 +132,3 @@ https://nbvtim.github.io/work/`))
 
 //xlsx = require('node-xlsx').parse(fs.readFileSync(`${__dirname}/all.xlsx`))
 //fs.writeFileSync("db.json",JSON.stringify(xlsx, null,"  "))
-
-let str = "йцукен ЙЦУКЕН qwerty QWERTY".match(/Q/)
-c(str.input)
