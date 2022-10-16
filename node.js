@@ -18,6 +18,11 @@ html_text = `
     <title>nbv &#127759;</title>
 </head>
 <body>
+    <form action="" method="get">
+        <input type="text" placeholder="Ваше имя" name="Name"> <br>
+        <input type="text" placeholder="Ваш телефон" name="Phohe"> <br>
+        <input type="submit" value="Подтвердить">
+    </form>
     <a href="/reg.html">Регистрация</a>
     <div>
         <input  id="tg_message" type="text" placeholder="Что нужно изменить? &#9997"><!-- --><button id="tg_button">&#10004;</button>
