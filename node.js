@@ -28,7 +28,7 @@ html_text = `
 ${JSON.stringify(xlsx[0].data)}
 </pre>
 <pre id="pre_key">
-${JSON.stringify(xlsx[1].data)}
+${""}
 </pre>
         <script src="html.js"></script>
 </body>
