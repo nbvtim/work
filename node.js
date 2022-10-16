@@ -1,13 +1,12 @@
+require('fs').copyFileSync("C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all.xlsx", `${__dirname}/SOURS/all-clone.xlsx`)
 const 
     c = console.log
     fs = require('fs')
-    xlsx = require('node-xlsx').parse(fs.readFileSync(`C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all.xlsx`))
+    xlsx = require('node-xlsx').parse(fs.readFileSync(`${__dirname}/SOURS/all-clone.xlsx`))
     chalk = require("chalk") // npm install chalk@4.1.2
 
-for (let i = 0; i < xlsx.length; i++) {
-    c(translit(xlsx[i].name))
-}
-
+//C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ
+//fs.copyFileSync()
 html_text = `
 <!DOCTYPE html>
 <html lang="ru">
@@ -45,13 +44,12 @@ function translit(text){
         for (let i = 0; i < letters.length; i++) {
             if(text[j] == letters[i][0]){
             result += letters[i][1]
+            break
         }
     }
     }return result
-}
+}c(translit("Текст"))
 
-c(chalk.rgb(0,0,200).bold(`
-${__dirname+"\\index.html"}
-https://nbvtim.github.io/work/`))
+c(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/`))
 
 fs.writeFileSync("SOURS/db.json", JSON.stringify(xlsx,null,"  "))
