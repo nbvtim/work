@@ -1,4 +1,4 @@
-document.location.reload()
+//document.location.reload()
 const c = console.log
 
 window.addEventListener('load', function(){
