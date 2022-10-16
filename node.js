@@ -23,7 +23,7 @@ html_text = `
         <input type="text" placeholder="Ваш телефон" name="Phohe"> <br>
         <input type="submit" value="Подтвердить">
     </form>
-    <a href="/reg.html">Регистрация</a>
+    
     <div>
         <input  id="tg_message" type="text" placeholder="Что нужно изменить? &#9997"><!-- --><button id="tg_button">&#10004;</button>
     </div>
