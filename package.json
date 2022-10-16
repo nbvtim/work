@@ -1,18 +1,17 @@
 {
-    "name": "xxx",
-    "version": "0.0.229",
-    "description": "",
-    "main": "index.js",
-    "scripts": {
-        "dev": "nodemon index",
-        "start": "node index"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "dependencies": {
-        "chalk": "^4.1.2",
-        "fs": "^0.0.1-security",
-        "node-xlsx": "^0.21.0"
-    }
+  "name": "xxx",
+  "version": "0.0.200",
+  "main": "node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "fs": "^0.0.1-security",
+    "node-xlsx": "^0.21.0"
+  }
 }

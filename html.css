@@ -1,0 +1,42 @@
+:active, :hover, :focus { outline: 0; outline-offset: 0;}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    padding: 10px;
+}
+#tg_message {width: calc(35% - 40px);}
+#tg_button  {height: 60px; width: 40px;}
+
+input{
+    font-size: 1em;
+    padding: 15px;
+    margin-bottom: 10px;
+    height: 60px;
+}
+#input_car  {font-weight:bolder; width: 35%;}
+#input_car::-webkit-input-placeholder {color: rgb(97, 102, 255);} 
+
+pre{
+    display: none;
+}
+table{
+    border-collapse: collapse;
+}
+th{
+    background-color: rgb(158, 158, 158);
+    border: 1px solid #fff;
+}
+td{
+    background-color: rgb(201, 201, 201);
+    border: 1px solid #fff;
+    padding-left: 5px;
+}
+
+/* 
+
+
+*/
