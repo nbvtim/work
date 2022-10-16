@@ -1,6 +1,6 @@
         let c = console.log
         let xhr = new XMLHttpRequest()
-        xhr.open("GET", "https://nbvtim.github.io/work/db.json", false)
+        xhr.open("GET", "", false)
         xhr.send()
         let pre = document.createElement("pre")
         pre.innerHTML = xhr.response
