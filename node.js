@@ -54,4 +54,4 @@ c(chalk.rgb(0,0,200).bold(`
 ${__dirname+"\\index.html"}
 https://nbvtim.github.io/work/`))
 
-fs.writeFileSync("db.json", JSON.stringify(xlsx,null,"  "))
+fs.writeFileSync("SOURS/db.json", JSON.stringify(xlsx,null,"  "))
