@@ -25,6 +25,7 @@ pre{
 }
 table{
     border-collapse: collapse;
+    width: 1400px;
 }
 th{
     background-color: rgb(158, 158, 158);
