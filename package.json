@@ -1,9 +1,9 @@
 {
-  "name": "xxx",
+  "name": "nbv",
   "version": "0.0.200",
   "main": "node.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node node.js"
   },
   "keywords": [],
   "author": "",
