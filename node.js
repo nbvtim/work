@@ -18,6 +18,7 @@ html_text = `
     <title>nbv &#127759;</title>
 </head>
 <body>
+    <a href="/reg.html">Регистрация</a>
     <div>
         <input  id="tg_message" type="text" placeholder="Что нужно изменить? &#9997"><!-- --><button id="tg_button">&#10004;</button>
     </div>
