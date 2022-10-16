@@ -12,8 +12,8 @@ html_text = `
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="favicon.svg">
-    <link rel="stylesheet" href="html.css">
+    <link rel="icon" href="SOURS/favicon.svg">
+    <link rel="stylesheet" href="index.css">
     <title>nbv &#127759;</title>
 </head>
 <body>    
@@ -29,7 +29,7 @@ ${JSON.stringify(xlsx[0].data)}
 <pre id="pre_key">
 ${""}
 </pre>
-        <script src="html.js"></script>
+        <script src="index.js"></script>
 </body>
 </html>
 `
