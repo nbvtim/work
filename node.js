@@ -48,7 +48,7 @@ function translit(text){
         }
     }
     }return result
-}c(translit("Текст"))
+}c(translit("Транслитерация"))
 
 c(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/`))
 
