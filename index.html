@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <link rel="icon" href="SOURS/favicon.svg">
     <link rel="stylesheet" href="index.css">
-    <title> nbv &#127759; </title>
+    <title>nbv &#127759;</title>
 </head>
 <body>    
     <div>
@@ -21,6 +21,12 @@
 
 </pre>
     <script src="index.js"></script>
-    
+    <script>
+        let c = console.log
+        let xhr = new XMLHttpRequest()
+        xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false)//
+        xhr.send()
+        c(xhr.response)
+    </script>
 </body>
 </html>
