@@ -59,5 +59,5 @@ function send_tg(text){
 let xhr = new XMLHttpRequest()
 xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false)//
 xhr.send()
-c(xhr.response)
+c(xhr.response[0].data[0])
     
