@@ -55,9 +55,9 @@ function send_tg(text){
     xhttp.open("GET", "https://api.telegram.org/bot5624303376:AAHW9oj4Nv7xsD4-L8wYTmHq1dvGiW33uNE/sendMessage?chat_id=5131265599&text=" + text, true)
     xhttp.send()
 }
-
-let xhr = new XMLHttpRequest()
-xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false)//
-xhr.send()
-c(xhr.response[0].data[0][0])
-    
+function nbv(){
+    let xhr = new XMLHttpRequest()
+    xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false)//
+    xhr.send()
+    c(JSON.parse(xhr.response)[0].data[0])
+}nbv()    
