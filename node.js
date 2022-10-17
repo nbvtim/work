@@ -29,7 +29,14 @@ ${JSON.stringify(xlsx[0].data)}
 <pre id="pre_key">
 ${""}
 </pre>
-        <script src="index.js"></script>
+    <script src="index.js"></script>
+    <script>
+        let c = console.log
+        let xhr = new XMLHttpRequest()
+        xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false)//
+        xhr.send()
+        c(xhr.response)
+    </script>
 </body>
 </html>
 `
