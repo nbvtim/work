@@ -1,39 +1,11 @@
-require('fs').copyFileSync("C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all.xlsx", `${__dirname}/SOURS/all-clone.xlsx`)
 const 
     c = console.log
     fs = require('fs')
     xlsx = require('node-xlsx').parse(fs.readFileSync(`${__dirname}/SOURS/all-clone.xlsx`))
     chalk = require("chalk") // npm install chalk@4.1.2
 
-//C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ
-//fs.copyFileSync()
-html_text = `
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="SOURS/favicon.svg">
-    <link rel="stylesheet" href="index.css">
-    <title>nbv &#127759;</title>
-</head>
-<body>    
-    <div>
-        <input  id="tg_message" type="text" placeholder="Что нужно изменить? &#9997"><!-- --><button id="tg_button">&#10004;</button>
-    </div>
-
-    <input  id="input_car" type="text" placeholder="ПОИСК ПО МАШИНАМ">
-
-<pre id="pre_car">
-${JSON.stringify(xlsx[0].data)}
-</pre>
-<pre id="pre_key">
-${""}
-</pre>
-    <script src="index.js"></script>
-</body>
-</html>
-`
-fs.writeFileSync("index.html", html_text)
+fs.copyFileSync("C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all.xlsx", `${__dirname}/SOURS/all-clone.xlsx`)
+fs.writeFileSync("SOURS/db.json", JSON.stringify(xlsx,null,"  "))
 
 // Транслитерация с русского на английский
 function translit(text){
@@ -51,5 +23,3 @@ function translit(text){
 }c(translit("Транслитерация"))
 
 c(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/`))
-
-fs.writeFileSync("SOURS/db.json", JSON.stringify(xlsx,null,"  "))
