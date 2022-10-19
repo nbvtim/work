@@ -16,10 +16,10 @@ function translit(text){
     for (let j = 0; j < text.length; j++) {
         for (let i = 0; i < letters.length; i++) {
             if(text[j] == letters[i][0]){
-            result += letters[i][1]
-            break
+                result += letters[i][1]
+                break
+            }
         }
-    }
     }return result
 }c(translit("Транслитерация"))
 
