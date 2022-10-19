@@ -17,8 +17,8 @@ input{
     margin-bottom: 10px;
     height: 60px;
 }
-#input_car  {font-weight:bolder; width: 35%;}
-#input_car::-webkit-input-placeholder {color: rgb(97, 102, 255);} 
+#input_  {font-weight:bolder; width: 35%;}
+#input_::-webkit-input-placeholder {color: rgb(97, 102, 255);} 
 
 pre{
     display: none;

@@ -6,7 +6,7 @@ xhr.send()
 
 window.addEventListener('load', function(){
     let div = document.createElement("div")
-    input_car.addEventListener('input', function(){
+    input_.addEventListener('input', function(){
         let table = ""
         let arr = []
         let db = JSON.parse(xhr.response)[0].data//JSON.parse(pre_car.innerText)
