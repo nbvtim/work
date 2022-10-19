@@ -1,13 +1,15 @@
 //document.location.reload()
 const c = console.log
-nbv()
+let xhr = new XMLHttpRequest()
+xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false)//
+xhr.send()
 
 window.addEventListener('load', function(){
     let div = document.createElement("div")
     input_car.addEventListener('input', function(){
         let table = ""
         let arr = []
-        let db = JSON.parse(pre_car.innerText)
+        let db = JSON.parse(xhr.response)[0].data//JSON.parse(pre_car.innerText)
 //делаем массив значений
         for (let i = 0; i < db.length; i++) {
             let index = db[i].join(",").toUpperCase().indexOf(input_car.value.toUpperCase())
@@ -57,9 +59,3 @@ function send_tg(text){
     xhttp.open("GET", "https://api.telegram.org/bot5624303376:AAHW9oj4Nv7xsD4-L8wYTmHq1dvGiW33uNE/sendMessage?chat_id=5131265599&text=" + text, true)
     xhttp.send()
 }
-function nbv(){
-    let xhr = new XMLHttpRequest()
-    xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false)//
-    xhr.send()
-    c(JSON.parse(xhr.response)[0].data[0])
-}    
