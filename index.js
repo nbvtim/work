@@ -1,5 +1,6 @@
 //document.location.reload()
 const c = console.log
+nbv()
 
 window.addEventListener('load', function(){
     let div = document.createElement("div")
@@ -60,4 +61,4 @@ function nbv(){
     xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false)//
     xhr.send()
     c(JSON.parse(xhr.response)[0].data[0])
-}nbv()    
+}    
