@@ -13,9 +13,8 @@ window.addEventListener('load', function(){
 //делаем массив значений
         for (let i = 0; i < db.length; i++) {
             let index = db[i].join(",").toUpperCase().indexOf(input_car.value.toUpperCase())
-            let arr_  = db[i]
             if(index != -1 && input_car.value != ""){
-                arr.push(arr_)
+                arr.push(db[i])
             }
         }
 //формируем HTML таблицу
