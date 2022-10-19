@@ -1,10 +1,11 @@
 //document.location.reload()
 const c = console.log
-let xhr = new XMLHttpRequest()
-xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false)//
-xhr.send()
 
 window.addEventListener('load', function(){
+    let xhr = new XMLHttpRequest()
+    xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false)//
+    xhr.send()
+
     let div = document.createElement("div")
     input_.addEventListener('input', function(){
         let table = ""
