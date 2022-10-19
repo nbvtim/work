@@ -1,6 +1,6 @@
 {
   "name": "nbv",
-  "version": "0.0.200",
+  "version": "0.0.3",
   "main": "node.js",
   "scripts": {
     "start": "node node.js"
