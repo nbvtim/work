@@ -10,7 +10,7 @@ window.addEventListener('load', function(){
     input_.addEventListener('input', function(){
         let table = ""
         let arr = []
-        let db = JSON.parse(xhr.response)[0].data//JSON.parse(pre_car.innerText)
+        let db = JSON.parse(xhr.response)[0].data
 
 //делаем массив значений
         for (let i = 0; i < db.length; i++) {
