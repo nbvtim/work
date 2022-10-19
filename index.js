@@ -7,10 +7,11 @@ window.addEventListener('load', function(){
     input_car.addEventListener('input', function(){
         let table = ""
         let arr = []
+        let db = JSON.parse(pre_car.innerText)
 //делаем массив значений
-        for (let i = 0; i < JSON.parse(pre_car.innerText).length; i++) {
-            let index = JSON.parse(pre_car.innerText)[i].join(",").toUpperCase().indexOf(input_car.value.toUpperCase())
-            let arr_  = JSON.parse(pre_car.innerText)[i]
+        for (let i = 0; i < db.length; i++) {
+            let index = db[i].join(",").toUpperCase().indexOf(input_car.value.toUpperCase())
+            let arr_  = db[i]
             if(index != -1 && input_car.value != ""){
                 arr.push(arr_)
             }
@@ -18,8 +19,8 @@ window.addEventListener('load', function(){
 //формируем HTML таблицу
         table = "<table><tbody>"
         table += "<tr>"
-        for (let i = 0; i < JSON.parse(pre_car.innerText)[0].length; i++) {
-            table += "<th>"+JSON.parse(pre_car.innerText)[0][i]+"</th>"
+        for (let i = 0; i < db[0].length; i++) {
+            table += "<th>"+db[0][i]+"</th>"
         }
         table += "</tr>"
         for (let i = 0; i < arr.length; i++) {
