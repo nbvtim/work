@@ -10,6 +10,7 @@ window.addEventListener('load', function(){
         let table = ""
         let arr = []
         let db = JSON.parse(xhr.response)[0].data//JSON.parse(pre_car.innerText)
+
 //делаем массив значений
         for (let i = 0; i < db.length; i++) {
             let index = db[i].join(",").toUpperCase().indexOf(input_.value.toUpperCase())
