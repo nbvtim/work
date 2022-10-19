@@ -30,10 +30,10 @@ table{
 th{
     background-color: rgb(158, 158, 158);
     border: 1px solid #fff;
+    padding: 10px;
 }
 td{
     background-color: rgb(201, 201, 201);
     border: 1px solid #fff;
-    padding-left: 10px;
-    height: 3em;
+    padding: 10px;
 }
