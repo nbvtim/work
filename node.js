@@ -1,10 +1,11 @@
 const 
     c = console.log
     fs = require('fs')
-    xlsx = require('node-xlsx').parse(fs.readFileSync(`${__dirname}/SOURS/all-clone.xlsx`))
+    xlsx = require('node-xlsx')
     chalk = require("chalk") // npm install chalk@4.1.2
 
 fs.copyFileSync("C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all.xlsx", `${__dirname}/SOURS/all-clone.xlsx`)
+xlsx.parse(fs.readFileSync(`${__dirname}/SOURS/all-clone.xlsx`))
 fs.writeFileSync("SOURS/db.json", JSON.stringify(xlsx,null,"  "))
 
 // Транслитерация с русского на английский
