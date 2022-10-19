@@ -12,8 +12,8 @@ window.addEventListener('load', function(){
         let db = JSON.parse(xhr.response)[0].data//JSON.parse(pre_car.innerText)
 //делаем массив значений
         for (let i = 0; i < db.length; i++) {
-            let index = db[i].join(",").toUpperCase().indexOf(input_car.value.toUpperCase())
-            if(index != -1 && input_car.value != ""){
+            let index = db[i].join(",").toUpperCase().indexOf(input_.value.toUpperCase())
+            if(index != -1 && input_.value != ""){
                 arr.push(db[i])
             }
         }
