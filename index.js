@@ -49,8 +49,11 @@ window.addEventListener('load', function(){
 
 // отправка сообщения в телеграм
 tg_button.onclick = function(){
-    send_tg(tg_message.value)
-    tg_message.value = ""
+    if(tg_message.value != ""){
+        send_tg(tg_message.value)
+        tg_message.value = ""
+    }
+    
 }
 function send_tg(text){
     // https://api.telegram.org/bot5624303376:AAHW9oj4Nv7xsD4-L8wYTmHq1dvGiW33uNE/getUpdates - переходим по адресу
