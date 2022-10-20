@@ -8,6 +8,7 @@
 body{
     margin: 10px;
     background-color: rgb(224, 224, 255);
+    width: 1400px;
 }
 #tg_message {width: calc(100% - 60px); background-color: rgb(236, 160, 88);border: 0;}
 #tg_button  {height: 60px; width: 60px; padding-bottom: 1px; background-color: rgb(236, 160, 88);border: 0;font-weight:bolder;}
