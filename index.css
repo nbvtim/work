@@ -8,8 +8,8 @@
 body{
     padding: 20px;
 }
-#tg_message {width: calc(35% - 40px);}
-#tg_button  {height: 60px; width: 40px;}
+#tg_message {width: calc(35% - 60px);}
+#tg_button  {height: 60px; width: 60px; padding-bottom: 1px;}
 input{
     font-size: 1em;
     padding: 15px;
