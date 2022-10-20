@@ -6,21 +6,21 @@
     font-family: sans-serif;
 }
 body{
-    padding: 20px;
+    margin: 10px;
+    background-color: rgb(224, 224, 255);
 }
-#tg_message {width: calc(35% - 60px);}
-#tg_button  {height: 60px; width: 60px; padding-bottom: 1px;}
+#tg_message {width: calc(100% - 60px); background-color: rgb(236, 160, 88);border: 0;}
+#tg_button  {height: 60px; width: 60px; padding-bottom: 1px; background-color: rgb(236, 160, 88);border: 0;font-weight:bolder;}
 input{
     font-size: 1em;
     padding: 15px;
     margin-bottom: 10px;
     height: 60px;
+    font-weight:bolder; 
 }
-#input_  {font-weight:bolder; width: 35%;}
-#input_::-webkit-input-placeholder {color: rgb(97, 102, 255);} 
-pre{
-    display: none;
-}
+input::-webkit-input-placeholder {text-transform: uppercase;color: rgb(255, 255, 255);} 
+#input_  {width: 100%; background-color: rgb(236, 160, 88);border: 0;}
+
 table{
     border-collapse: collapse;
     width: 1400px;
