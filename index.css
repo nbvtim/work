@@ -7,7 +7,7 @@
 }
 body{
     margin: 10px;
-    background-color: rgb(224, 224, 255);
+    background-color: black;
 }
 #tg_message {width: calc(100% - 60px); background-color: rgb(236, 160, 88);border: 0;}
 #tg_button  {height: 60px; width: 60px; padding-bottom: 1px; background-color: rgb(236, 160, 88);border: 0;font-weight:bolder;}
@@ -23,16 +23,15 @@ input::-webkit-input-placeholder {text-transform: uppercase;color: rgb(255, 255,
 
 table{
     border-collapse: collapse;
-    width: 1400px;
 }
 th{
     background-color: rgb(158, 158, 158);
     padding: 10px;
     text-align: initial;
-    border: 3px solid rgb(224, 224, 255);
+    border: 3px solid black;
 }
 td{
     background-color: rgb(201, 201, 201);
     padding: 10px;
-    border: 3px solid rgb(224, 224, 255);
+    border: 3px solid black;
 }
