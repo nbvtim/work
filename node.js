@@ -21,6 +21,6 @@ function translit(text){
             }
         }
     }return result
-}c(translit("Транслитерация"))
+}c(translit("ТИМ"))
 
 c(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/`))
