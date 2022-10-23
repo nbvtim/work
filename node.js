@@ -24,3 +24,15 @@ function translit(text){
 }c(translit("ТИМ"))
 
 c(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/`))
+
+
+
+
+
+
+
+const app = require("express")()
+let PORT = 777
+app.listen(PORT,function(){
+    c("Server...")
+})
