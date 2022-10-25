@@ -16,6 +16,16 @@ fs.access("C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицк
 xlsx = xlsx.parse(fs.readFileSync(`${__dirname}/SOURS/all-clone.xlsx`))
 fs.writeFileSync("SOURS/db.json", JSON.stringify(xlsx,null,"  "))
 
+c(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/`))
+
+
+// const app = require("express")()
+// let PORT = 777
+// app.listen(PORT,function(){c("Server...")})
+// app.get("/", function(req,res){
+//     res.send(__filename)
+// })
+
 // Транслитерация с русского на английский
 /*function translit(text){
     let result =""
@@ -30,13 +40,3 @@ fs.writeFileSync("SOURS/db.json", JSON.stringify(xlsx,null,"  "))
         }
     }return result
 }c(translit("ТИМ"))*/
-
-c(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/`))
-
-
-const app = require("express")()
-let PORT = 777
-app.listen(PORT,function(){c("Server...")})
-app.get("/", function(req,res){
-    res.send(__filename)
-})
