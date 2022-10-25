@@ -4,7 +4,15 @@ const
     xlsx = require('node-xlsx')
     chalk = require("chalk") // npm install chalk@4.1.2
 
-fs.copyFileSync("C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all.xlsx", `${__dirname}/SOURS/all-clone.xlsx`)
+fs.access("C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all.xlsx", function(error){
+    if (error) {
+        console.log(chalk.rgb(200,0,0).bold("Файл all.xlsx не найден и не скопирован"))
+    } else {
+        console.log(chalk.rgb(0,200,0).bold("Файл all.xlsx найден и скопирован"))
+        fs.copyFileSync("C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all.xlsx", `${__dirname}/SOURS/all-clone.xlsx`)
+    }
+})
+
 xlsx = xlsx.parse(fs.readFileSync(`${__dirname}/SOURS/all-clone.xlsx`))
 fs.writeFileSync("SOURS/db.json", JSON.stringify(xlsx,null,"  "))
 
