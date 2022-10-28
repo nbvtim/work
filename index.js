@@ -5,8 +5,6 @@ let xhr = new XMLHttpRequest()
 xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false) // данные берутся с сервера, возможна задержка 
 xhr.send()
 
-//pre.innerText = JSON.stringify(JSON.parse(xhr.response)[1].data, null, "    ")
-c(pre_)
 window.addEventListener('load', function(){
 
     let div = document.createElement("div")
