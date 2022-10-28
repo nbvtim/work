@@ -1,3 +1,4 @@
+
 window.addEventListener('load', function(){
 
     let c = console.log
