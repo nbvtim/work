@@ -6,8 +6,6 @@ window.addEventListener('load', function(){
     xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false) // данные берутся с сервера, возможна задержка 
     xhr.send()
 
-    pre.innerText = JSON.stringify(JSON.parse(xhr.response)[1].data, null, "\t")
-
     let div = document.createElement("div")
     input_.addEventListener('input', function(){
         let table = ""
@@ -49,7 +47,11 @@ window.addEventListener('load', function(){
             pre.style.display = "none"
         }
     })
+    for (let i = 0; i < JSON.parse(xhr.response)[1].data.length; i++) {
+        pre.innerText += JSON.stringify(JSON.parse(xhr.response)[1].data[i], null, "") + "\n"
+    }
 })
+
 
 // отправка сообщения в телеграм
 // tg_button.onclick = function(){
