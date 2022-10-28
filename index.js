@@ -6,7 +6,7 @@ window.addEventListener('load', function(){
     xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false) // данные берутся с сервера, возможна задержка 
     xhr.send()
 
-    pre.innerHTML = JSON.stringify(JSON.parse(xhr.response)[1].data,null,"  ")
+    pre.innerHTML = JSON.stringify(JSON.parse(xhr.response)[1].data,null,"      ")
 
     let div = document.createElement("div")
     input_.addEventListener('input', function(){
