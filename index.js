@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 const c = console.log
     let xhr = new XMLHttpRequest()
     xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false) // данные берутся с сервера, возможна задержка 
