@@ -1,11 +1,12 @@
-
-const c = console.log
-
-let xhr = new XMLHttpRequest()
-xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false) // данные берутся с сервера, возможна задержка 
-xhr.send()
-
 window.addEventListener('load', function(){
+
+    let c = console.log
+
+    let xhr = new XMLHttpRequest()
+    xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false) // данные берутся с сервера, возможна задержка 
+    xhr.send()
+
+    pre.innerHTML = JSON.stringify(JSON.parse(xhr.response)[1].data,null,"  ")
 
     let div = document.createElement("div")
     input_.addEventListener('input', function(){
@@ -42,9 +43,11 @@ window.addEventListener('load', function(){
         document.body.append(div)
         if(arr.length === 0){
             div.style.display = "none"
-        }else(
+            pre.style.display = "block"
+        }else{
             div.style.display = "block"
-        )
+            pre.style.display = "none"
+        }
     })
 })
 
