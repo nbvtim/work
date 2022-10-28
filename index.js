@@ -1,8 +1,12 @@
 
 const c = console.log
-    let xhr = new XMLHttpRequest()
-    xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false) // данные берутся с сервера, возможна задержка 
-    xhr.send()
+
+let xhr = new XMLHttpRequest()
+xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false) // данные берутся с сервера, возможна задержка 
+xhr.send()
+
+pre.innerText = xhr.response
+
 window.addEventListener('load', function(){
 
     let div = document.createElement("div")
