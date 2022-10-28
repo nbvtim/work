@@ -6,7 +6,6 @@ xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false) // дан�
 xhr.send()
 
 //pre.innerText = JSON.stringify(JSON.parse(xhr.response)[1].data, null, "    ")
-c(pre)
 
 window.addEventListener('load', function(){
 
