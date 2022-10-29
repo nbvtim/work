@@ -68,4 +68,4 @@ function send_tg(text){
     let xhttp = new XMLHttpRequest()
     xhttp.open("GET", "https://api.telegram.org/bot5624303376:AAHW9oj4Nv7xsD4-L8wYTmHq1dvGiW33uNE/sendMessage?chat_id=5131265599&text=" + text, true)
     xhttp.send()
-}send_tg("что-нужно придумать !!!")
+}send_tg("---")
