@@ -40,11 +40,3 @@ c(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/`))
         }
     }return result
 }c(translit("ТИМ"))*/
-
-
-let nbv = require('node-xlsx').parse(fs.readFileSync(`${__dirname}/My/1.ods`))[0].data
-for (let i = 0; i < nbv.length; i++) {
-    if(nbv[i][5] != undefined){
-        c(nbv[i][5])
-    }
-}
