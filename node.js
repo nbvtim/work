@@ -16,7 +16,11 @@ fs.access("C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицк
 xlsx = xlsx.parse(fs.readFileSync(`${__dirname}/SOURS/all-clone.xlsx`))
 fs.writeFileSync("SOURS/db.json", JSON.stringify(xlsx,null,"  "))
 
-c(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/`))
+c(chalk.rgb(0,0,200).bold(`
+https://nbvtim.github.io/work/
+
+${__dirname.replace(/\\/g, '/')}/index.html
+`))
 
 
 // const app = require("express")()
