@@ -34,3 +34,4 @@ ${__dirname}\\index.html`))
         }
     }return result
 }c(translit("ТИМ"))*/
+c(process.env.OS)
