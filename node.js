@@ -11,7 +11,8 @@ fs.writeFileSync("SOURS/all.json", JSON.stringify(xlsx,null,"  "))
 
 console.log(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/
 ${__dirname.replace(/\\/g, '/')}/index.html
-${__dirname}\\index.html`))
+${__dirname}\\index.html
+${process.env.OS}`))
 
 // const app = require("express")()
 // let PORT = 777
@@ -34,4 +35,3 @@ ${__dirname}\\index.html`))
         }
     }return result
 }c(translit("ТИМ"))*/
-c(process.env.OS)
