@@ -4,7 +4,7 @@ window.addEventListener('load', function(){
     let c = console.log
 
     let xhr = new XMLHttpRequest()
-    xhr.open("GET", "https://nbvtim.github.io/work/SOURS/db.json", false) // данные берутся с сервера, возможна задержка 
+    xhr.open("GET", "https://nbvtim.github.io/work/SOURS/all.json", false) // данные берутся с сервера, возможна задержка 
     xhr.send()
 
     let div = document.createElement("div")
