@@ -9,10 +9,11 @@ const
 xlsx = xlsx.parse(fs.readFileSync(`${__dirname}/SOURS/all.xlsx`))
 fs.writeFileSync("SOURS/all.json", JSON.stringify(xlsx,null,"  "))
 
-console.log(chalk.rgb(0,0,200).bold(`https://nbvtim.github.io/work/
+console.log(chalk.rgb(0,0,200).bold(`
+https://nbvtim.github.io/work/
 ${__dirname.replace(/\\/g, '/')}/index.html
 ${__dirname}\\index.html
-Операционная система - ${process.env.OS}`))
+`))
 
 // const app = require("express")()
 // let PORT = 777
