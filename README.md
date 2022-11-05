@@ -1,4 +1,4 @@
-
+<pre>
 git config --global user.email "exelent206@gmail.com"
 git config --global user.name "nbvtim"
 git clone https://github.com/nbvtim/work
@@ -20,3 +20,4 @@ netstat -ntlp		# подключен ли к серверу
 whoami 			# u0_a289
 Садимся за комп и коннектимся: ssh -p 8022 u0_a289@10.21.63.255 10.21.50.112 
 Для наглядности: apt install htop // htop
+</pre>
