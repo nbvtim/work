@@ -1,7 +1,7 @@
 const
     c = console.log
     fs = require('fs')
-    colors = require("colors") 
+    colors = require("colors")
     // black, red, green, yellow, blue, magenta, cyan, white, gray, grey
     // brightRed, bgRed, bgBrightRed
     // styles: reset, bold, dim, italic, underline, inverse, hidden, strikethrough
