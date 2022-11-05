@@ -1,6 +1,9 @@
 const
     c = console.log
     fs = require('fs')
+    colors = require("colors") // black, red, green, yellow, blue, magenta, cyan, white, gray, grey
+    // brightRed, bgRed, bgBrightRed
+
     xlsx = require('node-xlsx').parse(fs.readFileSync(`${__dirname}/SOURS/all.xlsx`))
 
 if(fs.existsSync("C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all_clone.xlsx")){
@@ -13,4 +16,4 @@ console.log(`
 https://nbvtim.github.io/work/
 ${__dirname.replace(/\\/g, '/')}/index.html
 ${__dirname}\\index.html
-`)
+`.italic.green)
