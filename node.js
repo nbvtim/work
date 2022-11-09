@@ -1,3 +1,5 @@
+const { url } = require('inspector')
+
 const
     c = console.log
     fs = require('fs')
@@ -7,9 +9,10 @@ const
     // styles: reset, bold, dim, italic, underline, inverse, hidden, strikethrough
     // extras: rainbow, random, zebra, america, trap
     xlsx = require('node-xlsx').parse(fs.readFileSync(`${__dirname}/SOURS/all.xlsx`))
+    urll = "C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all_clone.xlsx"
 
-if(fs.existsSync("C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all_clone.xlsx")){
-    fs.copyFileSync("./SOURS/all.xlsx" , "C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all_clone.xlsx")
+if(fs.existsSync(urll)){
+    fs.copyFileSync("./SOURS/all.xlsx" , urll)
 }
 
 fs.writeFileSync("SOURS/all.json", JSON.stringify(xlsx,null,"  "))
