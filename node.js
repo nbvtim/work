@@ -1,5 +1,3 @@
-const { url } = require('inspector')
-
 const
     c = console.log
     fs = require('fs')
@@ -17,7 +15,7 @@ if(fs.existsSync(urll)){
 
 fs.writeFileSync("SOURS/all.json", JSON.stringify(xlsx,null,"  "))
 
-console.log(`
+c(`
         https://nbvtim.github.io/work/
         ${__dirname.replace(/\\/g, '/')}/index.html
         ${__dirname}\\index.html
