@@ -8,6 +8,7 @@ window.addEventListener('load', function(){
     xhr.send()
 
     let div = document.createElement("div")
+    
     input_.addEventListener('input', function(){
         let table = ""
         let arr = []
@@ -61,6 +62,7 @@ window.addEventListener('load', function(){
 //         tg_message.value = ""
 //     }
 // }
+/*
 function send_tg(text){
     // https://api.telegram.org/bot5624303376:AAHW9oj4Nv7xsD4-L8wYTmHq1dvGiW33uNE/getUpdates - переходим по адресу
     // https://api.telegram.org/bot5624303376:AAHW9oj4Nv7xsD4-L8wYTmHq1dvGiW33uNE/sendMessage?chat_id=5131265599&text=бот_напишет_себе
@@ -69,3 +71,4 @@ function send_tg(text){
     xhttp.open("GET", "https://api.telegram.org/bot5624303376:AAHW9oj4Nv7xsD4-L8wYTmHq1dvGiW33uNE/sendMessage?chat_id=5131265599&text=" + text, true)
     xhttp.send()
 }send_tg("<<<>>>")
+*/
