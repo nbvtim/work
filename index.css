@@ -15,6 +15,7 @@ input{
     margin-bottom: 10px;
     height: 60px;
     font-weight:bolder; 
+    cursor: pointer;
 }
 input::-webkit-input-placeholder {text-transform: uppercase;color: rgb(255, 255, 255);} 
 #input_  {width: 100%; background-color: rgb(236, 160, 88);border: 0;}
