@@ -1,7 +1,5 @@
 
-window.addEventListener('load', function(){
-    
-    let c = console.log
+window.addEventListener('load', function(){let c = console.log    
 
     let xhr = new XMLHttpRequest()
     xhr.open("GET", "https://nbvtim.github.io/work/SOURS/all.json", false) // данные берутся с сервера, возможна задержка 
