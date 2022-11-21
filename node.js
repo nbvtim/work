@@ -6,12 +6,7 @@ const
     // brightRed, bgRed, bgBrightRed
     // styles: reset, bold, dim, italic, underline, inverse, hidden, strikethrough
     // extras: rainbow, random, zebra, america, trap
-    xlsx = require('node-xlsx').parse(fs.readFileSync(`${__dirname}/SOURS/all.xlsx`))
-    urll = "C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all_clone.xlsx"
-
-if(fs.existsSync(urll)){
-    fs.copyFileSync("./SOURS/all.xlsx" , urll)
-}
+    xlsx = require('node-xlsx').parse(fs.readFileSync("C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all.xlsx"))
 
 fs.writeFileSync("SOURS/all.json", JSON.stringify(xlsx,null,"  "))
 
