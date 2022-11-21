@@ -19,4 +19,4 @@ c(`
         https://nbvtim.github.io/work/
         ${__dirname.replace(/\\/g, '/')}/index.html
         ${__dirname}\\index.html
-`.rainbow)
+`.green)
