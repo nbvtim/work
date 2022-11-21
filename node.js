@@ -18,8 +18,6 @@ if(fs.existsSync(filePath)){
     c("Файл не существует".red)
 }
 
-
-//fs.existsSync(path)
 c(`
         https://nbvtim.github.io/work/
         ${__dirname.replace(/\\/g, '/')}/index.html
