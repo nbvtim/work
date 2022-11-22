@@ -47,8 +47,8 @@ window.addEventListener('load', function(){let c = console.log
             pre.style.display = "none"
         }
     })
-    for (let i = 0; i < JSON.parse(xhr.response)[2].data.length; i++) {
-        pre.innerText += JSON.stringify(JSON.parse(xhr.response)[2].data[i], null, "") + "\n"
+    for (let i = 0; i < JSON.parse(xhr.response)[1].data.length; i++) {
+        pre.innerText += JSON.stringify(JSON.parse(xhr.response)[1].data[i], null, "") + "\n"
     }
 })
 
