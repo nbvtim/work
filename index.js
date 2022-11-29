@@ -1,4 +1,4 @@
-
+//fetch('https://nbvtim.github.io/work/SOURS/all.json').then(function(res){return res.json()}).then(function(data){c(data)})
 window.addEventListener('load', function(){let c = console.log    
 
     let xhr = new XMLHttpRequest()
