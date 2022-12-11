@@ -22,14 +22,14 @@
             xhr.open("GET", "https://nbvtim.github.io/work/SOURS/all.json", false) // данные берутся с сервера, возможна задержка 
             xhr.send()
 
-            input_.placeholder = JSON.parse(xhr.response)[0].name + " " + JSON.parse(xhr.response).length
+            input_.placeholder = JSON.parse(xhr.response).name
 
             let div = document.createElement("div")
 
             input_.addEventListener('input', function(){
                 let table = ""
                 let arr = []
-                let db = JSON.parse(xhr.response)[0].data
+                let db = JSON.parse(xhr.response).data
 
                 //делаем массив значений
                 for (let i = 0; i < db.length; i++) {
