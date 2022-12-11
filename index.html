@@ -17,58 +17,55 @@
     <script>
 
         //fetch('https://nbvtim.github.io/work/SOURS/all.json').then(function(res){return res.json()}).then(function(data){c(data)})
-        window.addEventListener('load', function(){let c = console.log    
+        window.addEventListener('load', function(){
+            let c = console.log    
 
-        let xhr = new XMLHttpRequest()
-        xhr.open("GET", "https://nbvtim.github.io/work/SOURS/all.json", false) // данные берутся с сервера, возможна задержка 
-        xhr.send()
+            let xhr = new XMLHttpRequest()
+            xhr.open("GET", "https://nbvtim.github.io/work/SOURS/all.json", false) // данные берутся с сервера, возможна задержка 
+            xhr.send()
 
-        let div = document.createElement("div")
+            let div = document.createElement("div")
 
-        input_.addEventListener('input', function(){
-            let table = ""
-            let arr = []
-            let db = JSON.parse(xhr.response)[0].data
+            input_.addEventListener('input', function(){
+                let table = ""
+                let arr = []
+                let db = JSON.parse(xhr.response)[0].data
 
-        //делаем массив значений
-            for (let i = 0; i < db.length; i++) {
-                let index = db[i].join(",").toUpperCase().indexOf(input_.value.toUpperCase())
-                if(index != -1 && input_.value != ""){
-                    arr.push(db[i])
+                //делаем массив значений
+                for (let i = 0; i < db.length; i++) {
+                    let index = db[i].join(",").toUpperCase().indexOf(input_.value.toUpperCase())
+                    if(index != -1 && input_.value != ""){
+                        arr.push(db[i])
+                    }
                 }
-            }
-        //формируем HTML таблицу
-            table = "<table><tbody>"
-            table += "<tr>"
-            for (let i = 0; i < db[0].length; i++) {
-                table += "<th>"+db[0][i]+"</th>"
-            }
-            table += "</tr>"
-            for (let i = 0; i < arr.length; i++) {
+                //формируем HTML таблицу
+                table = "<table><tbody>"
                 table += "<tr>"
-                for (let j = 0; j < arr[i].length; j++) {
-                    table += "<td>"+arr[i][j]+"</td>"
+                for (let i = 0; i < db[0].length; i++) {
+                    table += "<th>"+db[0][i]+"</th>"
                 }
                 table += "</tr>"
-            }
-            table += "</tbody></table>"
-        //вставляем таблицу в документ
-            div.innerHTML = ""
-            document.body.append(div)
-            div.innerHTML = table
-            document.body.append(div)
-            if(arr.length === 0){
-                div.style.display = "none"
-                pre.style.display = "block"
-            }else{
-                div.style.display = "block"
-                pre.style.display = "none"
-            }
-        })
-
-        for (let i = 0; i < JSON.parse(xhr.response)[4].data.length; i++) {
-            pre.innerText += JSON.stringify(JSON.parse(xhr.response)[4].data[i], null, "") + "\n"
-        }
+                for (let i = 0; i < arr.length; i++) {
+                    table += "<tr>"
+                    for (let j = 0; j < arr[i].length; j++) {
+                        table += "<td>"+arr[i][j]+"</td>"
+                    }
+                    table += "</tr>"
+                }
+                table += "</tbody></table>"
+                //вставляем таблицу в документ
+                div.innerHTML = ""
+                document.body.append(div)
+                div.innerHTML = table
+                document.body.append(div)
+                if(arr.length === 0){
+                    div.style.display = "none"
+                    pre.style.display = "block"
+                }else{
+                    div.style.display = "block"
+                    pre.style.display = "none"
+                }
+            })
         })
 
 
@@ -79,6 +76,7 @@
         //         tg_message.value = ""
         //     }
         // }
+
         /*
         function send_tg(text){
         // https://api.telegram.org/bot5624303376:AAHW9oj4Nv7xsD4-L8wYTmHq1dvGiW33uNE/getUpdates - переходим по адресу
