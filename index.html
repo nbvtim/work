@@ -8,7 +8,8 @@
 </head>
 <body>
 
-    <input  id="input_" type="text" placeholder="ПОИСК">
+    <input  id="input_" type="text">
+
 
     <script>
 
@@ -19,6 +20,8 @@
             let xhr = new XMLHttpRequest()
             xhr.open("GET", "https://nbvtim.github.io/work/SOURS/all.json", false) // данные берутся с сервера, возможна задержка 
             xhr.send()
+
+            input_.placeholder = JSON.parse(xhr.response)[0].name + " " + JSON.parse(xhr.response).length
 
             let div = document.createElement("div")
 
