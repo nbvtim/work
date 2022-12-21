@@ -1,7 +1,7 @@
 {
   "name": "nbv",
   "version": "0.0.3",
-  "main": "node.js",
+  "main": "app.js",
   "scripts": {
     "start": "node node.js"
   },
