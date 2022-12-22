@@ -2,8 +2,45 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./SOURS/favicon.svg"> 
-    <link rel="stylesheet" href="./SOURS/index.css">
+    <link rel="icon" href="./favicon.svg"> 
+    <!-- <link rel="stylesheet" href="./SOURS/index.css"> -->
+    <style>
+        :active, :hover, :focus { outline: 0; outline-offset: 0;}
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            margin: 10px;
+            background-color: black;
+        }
+        input{
+            font-size: 1em;
+            padding: 15px;
+            margin-bottom: 10px;
+            height: 60px;
+            font-weight:bolder; 
+        }
+        input::-webkit-input-placeholder {text-transform: uppercase;color: rgb(255, 255, 255);} 
+        #input_  {width: 100%; background-color: rgb(236, 160, 88);border: 0;cursor: pointer;}
+
+        table{
+            border-collapse: collapse;
+        }
+        th{
+            background-color: rgb(158, 158, 158);
+            padding: 10px;
+            text-align: initial;
+            border: 3px solid black;
+        }
+        td{
+            background-color: rgb(201, 201, 201);
+            padding: 10px;
+            border: 3px solid black;
+        }
+    </style>
     <title>nbv &#127759;</title>
 </head>
 <body>
@@ -19,7 +56,7 @@
             let c = console.log    
 
             let xhr = new XMLHttpRequest()
-            xhr.open("GET", "https://nbvtim.github.io/work/SOURS/all.json", false) // данные берутся с сервера, возможна задержка 
+            xhr.open("GET", "https://nbvtim.github.io/work/all.json", false) // данные берутся с сервера, возможна задержка 
             xhr.send()
 
             input_.placeholder = JSON.parse(xhr.response).name
