@@ -12,8 +12,7 @@ const
 if(fs.existsSync(filePath)){
     c("Файл существует".green)
     xlsx = xlsx.parse(fs.readFileSync(filePath))[0]
-    fs.writeFileSync("SOURS/all.json", JSON.stringify(xlsx,null,"  "))
-    //fs.copyFileSync(filePath, `${__dirname}/SOURS/all-copy.xlsx`)
+    fs.writeFileSync("all.json", JSON.stringify(xlsx,null,"  "))
 }else{
     c("Файл не существует".red)
 }
