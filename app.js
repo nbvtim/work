@@ -10,15 +10,9 @@ const
     filePath = "C:/Users/User/Desktop/ДОКУМЕНТЫ/1 смена СВК/Яицких Т.Е/ОПИСИ/all.xlsx"
 
 if(fs.existsSync(filePath)){
-    c("Файл существует".green)
+    c("Файл существует, данные обновлены. Сайт: https://nbvtim.github.io/work/".green)
     xlsx = xlsx.parse(fs.readFileSync(filePath))[0]
-    fs.writeFileSync("all.json", JSON.stringify(xlsx,null,"  "))
+    fs.writeFileSync("all.json", JSON.stringify(xlsx, null, "  "))
 }else{
-    c("Файл не существует".red)
+    c("Файл не существует. Сайт: https://nbvtim.github.io/work/".red)
 }
-
-c(`
-        https://nbvtim.github.io/work/
-        ${__dirname.replace(/\\/g, '/')}/index.html
-        ${__dirname}\\index.html
-`.green)
