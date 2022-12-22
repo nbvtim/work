@@ -11,7 +11,7 @@ const
 
 if(fs.existsSync(filePath)){
     c("Файл существует, данные обновлены. Сайт: https://nbvtim.github.io/work/".green)
-    fs.writeFileSync("all.json", JSON.stringify(xlsx, null, "  "))
+    fs.writeFileSync("db.json", JSON.stringify(xlsx, null, "  "))
 }else{
     c("Файл не существует. Сайт: https://nbvtim.github.io/work/".red)
 }
