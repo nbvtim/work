@@ -16,6 +16,6 @@ if(fs.existsSync(filePath)){
 
 }else{
 
-    c("Файл не существует. Сайт: https://nbvtim.github.io/work/".red)
+    c("Файл не существует. \nСайт: https://nbvtim.github.io/work/".red)
     
 }
